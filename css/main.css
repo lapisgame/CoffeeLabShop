@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Marmelad';
+    color: #39260A;
+    background-color: #F5F5F5;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* assortment */
+.assortment{
+    background: #BED2B5; 
+}
+
+.card-box{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    padding-top: 36px;
+}
+
+.rectangle{
+    position: absolute;
+    top: 106px;
+    width: 420px;
+    background: #FFFFFF;
+}
+
+.card-title{
+    font-size: 36px;
+    line-height: 14px;
+    text-align: center;
+    color: #39260A;
+    /*background-color: #BED2B5;
+    background-color: #F5F5F5;*/
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.card-item{
+    position: relative;
+}
+
+/* Место под Слайдер */
+/*.slider-box{
+
+    height: 400px;
+    margin-bottom: 106px;
+}*/
+
+/* chooseUS */
+
+.chooseUs-title{
+    font-size: 40px;
+    line-height: 17px;
+    color: #39260A;
+    padding-left: 152px;
+    padding-bottom: 66px;
+}
+
+
+.list-text{
+    padding-left: 44px;
+}
+
+.list-container{
+    padding-left: 248px;
+    list-style-type: none;
+    padding-bottom: 34px;
+    
+}
+
+.list {
+    font-size: 24px;
+    line-height: 14px;
+    color: #39260A;
+}
+
+.list-wrap{
+    padding-bottom: 28px;
+}
+
+.chooseUs-list{
+    margin-bottom: 96px;
+}
+
+.list-container .img-coffecup{
+    background-image: url(../img/coffeecup.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.list-container .img-checkcircle{
+    background-image: url(../img/check-circle.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.list-container .img-package{
+    background-image: url(../img/package.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+}.list-container .img-dollar{
+    background-image: url(../img/dollar-sign.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+/* description */
+.description-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 17px;
+    color: #39260A;
+    text-align: right;
+    padding-right: 146px;
+    padding-bottom: 20px;
+}
+
+.description-box{
+    display: flex;
+    padding-right: 146px;
+    padding-left: 150px;
+}
+
+.description-text{
+    font-size: 20px;
+    line-height: 40px;
+    color: #39260A;
+    padding-right: 20px;
+}
+.description-img{
+    padding-top: 40px;
+}
+
+.span-text {
+    display: block;
+}

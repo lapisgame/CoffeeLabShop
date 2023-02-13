@@ -1,0 +1,93 @@
+
+.header-wrap{
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 30px 0px 0px 0px;
+}
+
+.call-link{
+    padding: 0px 0px 0px 150px;
+}
+
+.link_logo {
+    max-width: 26px;
+    display: inline-flex;
+}
+
+.user-link{
+    vertical-align: middle;
+    max-width: 26px;
+}
+
+.user-link-login{
+    font-family: Marmelad;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #39260A;
+    text-decoration: none;
+}
+
+.call-item_1::before{
+    content: url('../img/geo.png');
+    vertical-align: middle;
+}
+
+.call-item_2::before{
+    content: url('../img/mail.png');
+    vertical-align: middle;
+}
+
+.geo,
+.phone {
+    color: #39260A;
+    text-decoration: none;
+    padding: 0px 0px 6px 5px;
+    font-family: Marmelad;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.info{
+    vertical-align: middle;
+    list-style-type: none;
+}
+
+.head_autz{
+    padding: 0px 0px 10px 227px;
+}
+
+.title_h1{
+    font-family: Marmelad;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 0px 0px 20px 315px;
+    color: #39260A;
+}
+
+.logo{
+    max-width: 71px;
+    margin-left: 360px;
+}
+
+.nav-wrap{
+    border: 1px solid #000;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.navbar{
+    padding: 0px 0px 0px 34px;
+}
+
+.item{
+    display: inline-flex;
+    padding: 20px 0px 15px 117px;
+    font-family: Marmelad;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+

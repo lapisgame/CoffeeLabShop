@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgba(206, 232, 185, 0.18);
+}
+
+
+a, a:hover, a:active{
+    text-decoration: none;
+    color: rgba(57, 38, 10, 1);
+}
+
+li{
+    list-style-type: none;
+}
+
+.wrap{
+    max-width: 1440px;
+    margin: 0px auto;
+    padding-top: 60px;
+}
+
+
+
+.coffee_img{
+    opacity: 60%;
+}
+
+.footer_block{
+    margin-top: 40px;
+}
+
+
+/* Меню */
+
+.footer_columns{
+    padding: 0px 225px;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu_column_title{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 43px;
+}
+
+.footer_menu_column{
+    display: block;
+}
+
+.menu_element{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+.work_time{
+    margin-bottom: 17px
+}
+
+.contact_item{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.contact_item p{
+    padding-left: 11px;
+    font-family: 'Marmelad';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.social_link{
+    padding-left: 8px;
+}
+
+
+/* Копирайт */
+
+.copyrights{
+    display: flex;
+    justify-content: space-between;
+    padding: 27px 225px;
+}
+
+.copyrights_item{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.copy_img{
+    padding: 0 0 4px 4px;
+}
