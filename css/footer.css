@@ -18,7 +18,7 @@ li{
 }
 
 .wrap{
-    max-width: 1440px;
+    width: auto;
     margin: 0px auto;
     padding-top: 60px;
 }
