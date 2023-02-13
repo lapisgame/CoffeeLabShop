@@ -4,6 +4,16 @@ signupForm['email'].addEventListener('change', e=>{
     e.style = 'background-color: red';
 })
 
+function hide(){
+    let modalOverlay = document.querySelector('.modal-overlay ');
+    let modals = document.querySelectorAll('.modal');
+
+    modalOverlay.classList.remove('modal-overlay--visible');
+    modals.forEach((el) => {
+        el.classList.remove('modal--visible');
+    });
+}
+
 signupForm.addEventListener('submit', e=> {
     e.preventDefault();
     const email = signupForm['email'].value.trim();
@@ -11,17 +21,15 @@ signupForm.addEventListener('submit', e=> {
     const pass2 = signupForm['password2'].value.trim();
 
     if (pass1 !== '' && pass2 !== '' && pass1 === pass2){
-        alert('Pass ok');
         auth.createUserWithEmailAndPassword(email,pass1).then(cred => {
             return db.collection('users').doc(cred.user.uid).set({
                 email, pass1
             }).then(() => {
                 signupForm.reset();
-                //ПЕРЕНАПРАВЛЕНИЕ НА ФОРМУ ЛОГИНА
-                alert("REG OK");
+                hide();
             }).catch(err => {
                 if (err.code === 'auth/email-already-in-use') {
-                    console.log('That email address is already in use!');
+                    alert('That email address is already in use!');
                 }
                 else{
                     console.log(err.message);
