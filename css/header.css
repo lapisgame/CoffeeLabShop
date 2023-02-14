@@ -30,12 +30,12 @@
 }
 
 .call-item_1::before{
-    content: url('../img/geo.png');
+    content: url('../img/header/geo.png');
     vertical-align: middle;
 }
 
 .call-item_2::before{
-    content: url('../img/mail.png');
+    content: url('../img/footer/mail.png');
     vertical-align: middle;
 }
 

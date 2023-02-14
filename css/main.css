@@ -40,8 +40,6 @@ body {
     line-height: 14px;
     text-align: center;
     color: #39260A;
-    /*background-color: #BED2B5;
-    background-color: #F5F5F5;*/
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -49,15 +47,6 @@ body {
 .card-item{
     position: relative;
 }
-
-/* Место под Слайдер */
-/*.slider-box{
-
-    height: 400px;
-    margin-bottom: 106px;
-}*/
-
-/* chooseUS */
 
 .chooseUs-title{
     font-size: 40px;
@@ -94,24 +83,24 @@ body {
 }
 
 .list-container .img-coffecup{
-    background-image: url(../img/coffeecup.png);
+    background-image: url(../img/main/coffeecup.png);
     background-position: 0 0;
     background-repeat: no-repeat;
 }
 
 .list-container .img-checkcircle{
-    background-image: url(../img/check-circle.png);
+    background-image: url(../img/main/check-circle.png);
     background-position: 0 0;
     background-repeat: no-repeat;
 }
 
 .list-container .img-package{
-    background-image: url(../img/package.png);
+    background-image: url(../img/main/package.png);
     background-position: 0 0;
     background-repeat: no-repeat;
 
 }.list-container .img-dollar{
-    background-image: url(../img/dollar-sign.png);
+    background-image: url(../img/main/dollar-sign.png);
     background-position: 0 0;
     background-repeat: no-repeat;
 }
