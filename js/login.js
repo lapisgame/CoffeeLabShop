@@ -16,12 +16,23 @@ loginForm.addEventListener('submit', e => {
     const loginPassword = loginForm['password'].value.trim();
 
     if (loginEmail !== '' && loginPassword !== ''){
-        auth.signInWithEmailAndPassword(loginEmail, loginPassword).then(() =>
-            hide()
-        ).catch(err => {
+        auth.signInWithEmailAndPassword(loginEmail, loginPassword).then(() => {
+            hide();
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: 'Авторизация прошла успешно',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }).catch(err => {
             if (err.code === 'auth/user-not-found'){
-                //ВЫВЕСТИ ЧТО ПОЛЬЗОВАТЕЛЬ НЕ НАЙДЕН
-                alert('Пользователя с такими данными не существует');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ошибка',
+                    text: 'Пользователя с такими данными не существует'
+                })
+                loginForm.reset();
             }
             else{
                 console.log(err.message);
@@ -29,6 +40,8 @@ loginForm.addEventListener('submit', e => {
         })
     }
 })
+
+
 
 var button_login = document.createElement('button');
 var button_lk = document.createElement('a');

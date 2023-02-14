@@ -23,20 +23,36 @@ signupForm.addEventListener('submit', e=> {
     if (pass1 !== '' && pass2 !== '' && pass1 === pass2){
         auth.createUserWithEmailAndPassword(email,pass1).then(cred => {
             return db.collection('users').doc(cred.user.uid).set({
-                email, pass1
+                email, 
+                password: pass1,
+                phone: "",
+                addres: ""
             }).then(() => {
                 signupForm.reset();
                 hide();
             }).catch(err => {
                 if (err.code === 'auth/email-already-in-use') {
-                    alert('That email address is already in use!');
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ошибка',
+                        text: 'Пользователь с такой почтой уже существует'
+                    })
                 }
                 else{
                     console.log(err.message);
                 }
             })
         }).catch(err => {
-            console.log(err.message);
+            if (err.code === 'auth/email-already-in-use') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ошибка',
+                    text: 'Пользователь с такой почтой уже существует'
+                })
+            }
+            else{
+                console.log(err.message);
+            }
         })
     }   
 })
