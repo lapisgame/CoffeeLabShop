@@ -6,6 +6,10 @@
     padding: 30px 0px 0px 0px;
 }
 
+a, a:hover{
+    text-decoration: none;
+}
+
 .call-link{
     padding: 0px 0px 0px 150px;
 }
