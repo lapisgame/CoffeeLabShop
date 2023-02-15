@@ -28,6 +28,9 @@ signupForm.addEventListener('submit', e=> {
                 phone: "",
                 addres: ""
             }).then(() => {
+                localStorage.setItem('flagLogin', true);
+                localStorage.setItem('coffeeLoginEmail', loginEmail);
+                localStorage.setItem('coffeeLoginPassword', loginPassword);
                 signupForm.reset();
                 hide();
             }).catch(err => {

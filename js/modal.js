@@ -35,6 +35,9 @@ auth.onAuthStateChanged((user) => {
 		btn_out.addEventListener('click', e => {
 			e.preventDefault();
 			auth.signOut();
+			localStorage.setItem('flagLogin', false);
+            localStorage.setItem('coffeeLoginEmail', "");
+            localStorage.setItem('coffeeLoginPassword', "");
 		})
     }
     else{

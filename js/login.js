@@ -10,11 +10,9 @@ function hide(){
     });
 }
 
-loginForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const loginEmail = loginForm['email'].value.trim();
-    const loginPassword = loginForm['password'].value.trim();
-
+function loginWithEmailAndPassword(loginEmail, loginPassword){
+    console.log(loginEmail);
+    console.log(loginPassword);
     if (loginEmail !== '' && loginPassword !== ''){
         auth.signInWithEmailAndPassword(loginEmail, loginPassword).then(() => {
             hide();
@@ -25,6 +23,9 @@ loginForm.addEventListener('submit', e => {
                 showConfirmButton: false,
                 timer: 1500
             })
+            localStorage.setItem('flagLogin', true);
+            localStorage.setItem('coffeeLoginEmail', loginEmail);
+            localStorage.setItem('coffeeLoginPassword', loginPassword);
         }).catch(err => {
             if (err.code === 'auth/user-not-found'){
                 Swal.fire({
@@ -39,21 +40,20 @@ loginForm.addEventListener('submit', e => {
             }
         })
     }
+}
+
+function tryLoginFromLocalStogage(){
+    if (localStorage.getItem('flagLogin')){
+        loginWithEmailAndPassword(localStorage.getItem('coffeeLoginEmail'), localStorage.getItem('coffeeLoginPassword'));
+    }
+}
+
+loginForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const loginEmail = loginForm['email'].value.trim();
+    const loginPassword = loginForm['password'].value.trim();
+
+    loginWithEmailAndPassword(loginEmail, loginPassword);
 })
 
-
-
-var button_login = document.createElement('button');
-var button_lk = document.createElement('a');
-
-const head_par = document.querySelector(".head_autz");
-
-button_login.className = "btn-popup";
-button_login.setAttribute("id", "log_btn");
-button_login.setAttribute("data-path", "form-popup");
-button_login.innerHTML = "ВойтИ";
-
-button_lk.className = "user-link-login";
-button_lk.setAttribute("href", "Personal_Area.html");
-button_lk.setAttribute("id", "log_btn");
-button_lk.innerHTML = "Личный кабинеТ";
+tryLoginFromLocalStogage();
