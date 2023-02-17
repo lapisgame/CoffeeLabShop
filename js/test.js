@@ -50,13 +50,51 @@ function saveData(){
 }
 
 function drawProducts(name){
-    db.collection('Prod').doc(name).get().then(doc => {
-        document.querySelector('#nameRow').innerHTML = (doc.data().name);
-        document.querySelector('#dis').innerHTML = (doc.data().dis);
+    let box = document.querySelector("#boxberry");
 
-        document.querySelector('#r1').innerHTML = (doc.data().par1);
-        document.querySelector('#r2').innerHTML = (doc.data().par2);
-        document.querySelector('#r3').innerHTML = (doc.data().par3);
+    let block = document.createElement('div')
+    block.className = "block"
+    
+    let b1 = document.createElement('div')
+    b1.className = "row1"
+    let b2 = document.createElement('div')
+    b1.className = "row2"
+
+    let h2Row = document.createElement('h2')
+    h2Row.setAttribute("id", "nameRow")
+    let dis = document.createElement('p')
+    dis.setAttribute("id", "dis")
+
+    let mb1 = document.createElement('div')
+    mb1.className = "miniBlock"
+    mb1.setAttribute("id", "r1")
+    let mb2 = document.createElement('div')
+    mb2.className = "miniBlock"
+    mb2.setAttribute("id", "r2")
+    let mb3 = document.createElement('div')
+    mb3.className = "miniBlock"
+    mb3.setAttribute("id", "r3")
+
+
+    db.collection('Prod').doc(name).get().then(doc => {
+        h2Row.innerHTML = (doc.data().name);
+        dis.innerHTML = (doc.data().dis);
+
+        mb1.innerHTML = (doc.data().par1);
+        mb2.innerHTML = (doc.data().par2);
+        mb3.innerHTML = (doc.data().par3);
+
+        b1.appendChild(h2Row)
+        b1.appendChild(dis)
+
+        b2.appendChild(mb1)
+        b2.appendChild(mb2)
+        b2.appendChild(mb3)
+
+        block.appendChild(b1);
+        block.appendChild(b2);
+
+        box.appendChild(block);
     })
 }
 
