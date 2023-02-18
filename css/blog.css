@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad';
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Marmelad';
+    color: #39260A;
+    background-color: #F5F5F5;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.li_blog5{
+    list-style-type: disc;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.menu_text{
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 20px;
+    color: #39260A;
+    letter-spacing: 0.2em;
+}
+
+.menu_wrap1{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.blog_img1{
+    width: 555px;
+    position: relative;
+}
+
+.img_txt_box1{
+    position: absolute;
+    text-align: center;
+    background: #BED2B5;
+    /* top: 215px; */
+    top: 438px;
+    width: 555px;
+    padding-top:34px;
+    padding-bottom: 35px;
+}
+
+.img_txt1{
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #39260A;
+}
+
+.blog_text1{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    color: #39260A;
+    width: 517px;
+    padding-top: 49px;
+}
+
+.blog_text2{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    color: #39260A;
+    width: 559px;
+    padding-top: 49px;
+}
+
+.menu_wrap2{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.blog_img2{
+    position: relative;
+    width: 361px;
+}
+
+.img_txt_box2{
+    position: absolute;
+    width: 361px;
+    padding-top: 20px;
+    padding-bottom: 21px;
+    text-align: center;
+    background: #BED2B5;
+    top: 1073px
+}
+
+.img_txt2{
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #39260A;
+}
+
+.blog3_paragraph_box{
+    margin-top: 20px;
+}
+
+.blog3_text1 ,.blog3_text2 ,.blog3_text3{
+    width: 348px;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #39260A;
+}
+
+.blog4_paragraph_box{
+    margin-top: 20px;
+}
+
+.blog4_text1{
+    width: 338px;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #39260A;
+}
+
+.blog5_paragraph_box{
+    margin-top: 20px;
+}
+
+.blog5_text1 ,.blog5_text2 ,.blog5_text3{
+    width: 334px;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #39260A;
+}

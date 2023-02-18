@@ -10,18 +10,20 @@ function hide(){
     });
 }
 
-function loginWithEmailAndPassword(loginEmail, loginPassword){
+function loginWithEmailAndPassword(loginEmail, loginPassword, pushFlag){
     if (loginEmail !== '' && loginPassword !== ''){
         auth.signInWithEmailAndPassword(loginEmail, loginPassword).then(() => {
             hide();
             loginForm.reset();
-            Swal.fire({
-                position: 'top',
-                icon: 'success',
-                title: 'Авторизация прошла успешно',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            if (pushFlag){
+                Swal.fire({
+                    position: 'top',
+                    icon: 'success',
+                    title: 'Авторизация прошла успешно',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
             localStorage.setItem('flagLogin', true);
             localStorage.setItem('coffeeLoginEmail', loginEmail);
             localStorage.setItem('coffeeLoginPassword', loginPassword);
@@ -43,7 +45,7 @@ function loginWithEmailAndPassword(loginEmail, loginPassword){
 
 function tryLoginFromLocalStogage(){
     if (localStorage.getItem('flagLogin')){
-        loginWithEmailAndPassword(localStorage.getItem('coffeeLoginEmail'), localStorage.getItem('coffeeLoginPassword'));
+        loginWithEmailAndPassword(localStorage.getItem('coffeeLoginEmail'), localStorage.getItem('coffeeLoginPassword'), false);
     }
 }
 
@@ -52,7 +54,7 @@ loginForm.addEventListener('submit', e => {
     const loginEmail = loginForm['email'].value.trim();
     const loginPassword = loginForm['password'].value.trim();
 
-    loginWithEmailAndPassword(loginEmail, loginPassword);
+    loginWithEmailAndPassword(loginEmail, loginPassword, true);
 })
 
 tryLoginFromLocalStogage();
