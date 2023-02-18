@@ -11,11 +11,10 @@ function hide(){
 }
 
 function loginWithEmailAndPassword(loginEmail, loginPassword){
-    console.log(loginEmail);
-    console.log(loginPassword);
     if (loginEmail !== '' && loginPassword !== ''){
         auth.signInWithEmailAndPassword(loginEmail, loginPassword).then(() => {
             hide();
+            loginForm.reset();
             Swal.fire({
                 position: 'top',
                 icon: 'success',

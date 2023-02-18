@@ -28,11 +28,19 @@ signupForm.addEventListener('submit', e=> {
                 phone: "",
                 addres: ""
             }).then(() => {
-                localStorage.setItem('flagLogin', true);
-                localStorage.setItem('coffeeLoginEmail', loginEmail);
-                localStorage.setItem('coffeeLoginPassword', loginPassword);
-                signupForm.reset();
                 hide();
+                
+                Swal.fire({
+                    position: 'top',
+                    icon: 'success',
+                    title: 'Регистрация прошла успешно',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                localStorage.setItem('flagLogin', true);
+                localStorage.setItem('coffeeLoginEmail', email);
+                localStorage.setItem('coffeeLoginPassword', pass1);
+                signupForm.reset();
             }).catch(err => {
                 if (err.code === 'auth/email-already-in-use') {
                     Swal.fire({
