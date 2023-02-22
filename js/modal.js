@@ -7,7 +7,7 @@ var button_lk = document.createElement('a');
 var button_out = document.createElement('button');
 
 button_lk.className = "user-link-login";
-button_lk.setAttribute("href", "Personal_Area.html");
+//button_lk.setAttribute("href", "Personal_Area.html");
 button_lk.setAttribute("id", "log_btn");
 button_login.setAttribute("attribute_flag", "rem");
 button_lk.innerHTML = "Личный кабинеТ";
@@ -29,6 +29,12 @@ auth.onAuthStateChanged((user) => {
 			e.remove();
 		});
         document.querySelector(".head_autz").appendChild(button_lk);
+		if (user.email === "admin@admin.ru"){
+			button_lk.setAttribute("href", "admin_page.html");
+		}
+		else{
+			button_lk.setAttribute("href", "Personal_Area.html");
+		}
 		document.querySelector(".head_autz").appendChild(button_out);
 		var btn_out = document.querySelector(".btn_out");
 

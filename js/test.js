@@ -1,5 +1,22 @@
 let btn = document.querySelector(".btn");
 
+let num = ""
+db.collection('Prod').doc("ProdNames").get().then((docs) => {
+    for (num in docs.data()){
+        console.log(num);
+    }
+}).then(() => {
+    document.querySelector("#createProduct").addEventListener('submit', e=>{
+        e.preventDefault();
+        saveData(num);
+    })
+    
+    document.querySelector("#draw").addEventListener('submit', e=>{
+        e.preventDefault();
+        drawProducts(document.querySelector("#nameDraw").value);
+    })
+})
+
 const form = document.querySelector("#createProduct")
 
 btn.addEventListener('click', e => {
@@ -19,7 +36,7 @@ btn.addEventListener('click', e => {
     })
 })
 
-function saveData(){
+function saveData(number){
     const form = document.querySelector("#createProduct")
 
     const name = form['name'].value;
@@ -28,12 +45,20 @@ function saveData(){
     const par2 = form['par2'].value;
     const par3 = form['par3'].value;
 
+
+    let newnum = String(Number(number) + 1)
+
     return db.collection('Prod').doc(name).set({
         name,
         dis,
         par1,
         par2,
         par3
+    }).then(() => {
+        console.log(newnum);
+        db.collection('ProdNames').doc(newnum).set({
+            name
+        })
     }).then(() => {
         Swal.fire({
             icon: 'success',
@@ -98,12 +123,3 @@ function drawProducts(name){
     })
 }
 
-document.querySelector("#createProduct").addEventListener('submit', e=>{
-    e.preventDefault();
-    saveData();
-})
-
-document.querySelector("#draw").addEventListener('submit', e=>{
-    e.preventDefault();
-    drawProducts(document.querySelector("#nameDraw").value);
-})

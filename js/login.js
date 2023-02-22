@@ -27,6 +27,7 @@ function loginWithEmailAndPassword(loginEmail, loginPassword, pushFlag){
             localStorage.setItem('flagLogin', true);
             localStorage.setItem('coffeeLoginEmail', loginEmail);
             localStorage.setItem('coffeeLoginPassword', loginPassword);
+            
         }).catch(err => {
             if (err.code === 'auth/user-not-found'){
                 Swal.fire({
