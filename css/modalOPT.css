@@ -1,0 +1,193 @@
+.btng {
+	background-color: #ffffff;
+	border: none;
+	cursor: pointer;
+	color: dimgray;
+}
+.email {
+    font-family: 'Marmelad';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.6px;
+
+    color: #39260A;
+
+}
+
+.btnDV{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+}
+ 
+.img{
+    position: absolute;
+    margin-left: 43px;
+}
+
+.btnV{
+    position: static;
+    margin-top: 40px;
+    width: 432px;
+    height: 60px;
+    font-family: 'Marmelad';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.6px;
+    border: none;
+    cursor: pointer;
+    background: #829977;
+    border-radius: 28px;
+}
+
+
+.btnz{
+    margin-top: 60px;
+    width: 432px;
+    height: 60px;
+    font-family: 'Marmelad';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.6px;
+    border: none;
+    cursor: pointer;
+    background: #829977;
+    border-radius: 28px;
+   }
+
+.modali-overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+	height: 100vh;
+	width: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+}
+
+.modal-close{
+    width: 16px;
+    border: none;
+    color: #ffffff;
+    background-color: black;
+    margin-top: 7px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.span {
+    display: flex;
+    justify-content: end;
+   
+}
+.pV{
+    color: #39260A;
+    font-family: 'Marmelad';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+.headerV{
+    color: #39260A;
+    margin-top: 55px;
+    font-family: 'Marmelad';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+.header{
+    color: #39260A;;
+    padding-bottom: 18px;
+    border-bottom: solid #39260A 2px;
+    font-family: 'Marmelad';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+.modali {
+	background-color: #fff;
+	width: 946px;
+	height: 346px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+    color: black;
+}
+
+.modal--2{
+	background-color: #fff;
+	width: 591px;
+	height: 564px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+    color: black;
+}
+
+.modali-overlay--visible {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.3s ease-in-out;
+}
+
+.modali--visible {
+    color: #39260A;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #BED2B5;
+	display: block;
+}
+
+.lip2{
+    margin-left: 70px;
+}
+
+.inputer{ 
+    margin-top: 20px;
+    border: none;
+    width: 428px;
+    height: 38px;
+    background: #FFFFFF;
+    border-radius: 28px;
+}
+.labelse{
+    margin-top: 16px;
+    margin-left: 5px;
+    font-family: 'Marmelad';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.6px;
+    color: #39260A;
+   
+    
+}

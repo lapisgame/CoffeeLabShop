@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS-решения №1</title>
+	<link rel="stylesheet" href="modalOPT.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	
+	<button class="btng" data-path="get-popup"><p>ОПТ</p></button>
+
+	<div id="bb" class="modals">
+		<div class="modali-overlay">
+			<div class="modali modal--1" data-target="los-popup">
+                
+            <div class="lgn">
+                <form id="Z-O-form" class="form center">
+                    <span class="span"><button class="modal-close" type="submit">&times;</button></span>
+                       <div>
+                        <h2 class="headerV" >СПАСИБО ЗА ОБРАЩЕНИЕ!</h2>
+                        <p class="pV" >Наш менеджер свяжется с Вами в ближайшее время!</p>
+                        
+                            <div>
+                                <img class="img" src="img/Ellipse 15.png" alt="1">
+                            </div>
+                       </div>
+                        
+
+                          <div class="btnDV">
+                             <div>
+                                 <button class="btnV" type="menu">Вернуться на главную</button>
+                               </div>
+                          </div>
+                </form>
+            </div>	
+
+			</div>
+            <div class="modali modal--2" data-target="get-popup">
+                <form id="OPT-form" class="form center">
+                                <span class="span"><button class="modal-close" type="submit">&times;</button></span>
+                    <div class="">
+                            <h2  class="header" >Оставить заявку</h2>
+                        <div class="lip2">
+                        
+                                <p>
+                                    <label class="labelse" for="Name">Ваше имя (обязательно):</label>
+                                    <input class="inputer" type="Name1" id="Name">
+                                </p>
+                                <p>
+                                    <label class="labelse" for="Phone">Ваш телефон (обязательно): </label>
+                                    <input class="inputer" type="Phone1" id="Phone">
+                                </p>
+                                <p>
+                                    <label class="labelse" for="email">Ваш Email :</label>
+                                    <input class="inputer" type="email" id="email">
+                                </p>
+
+                            <button class="btnz" type="submit" data-path="los-popup">Заказать оптом</button>
+                        </div>
+                    
+                    </div> 
+                </form>
+            </div>
+		</div>
+	</div>
+
+	<script src="modalOPT.js"></script>
+    <script src="modalOPT_S.js"></script>
+</body>
+</html>
+
+
+</body>
+</html>

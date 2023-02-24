@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', sans-serif;
+    font-style: normal;
+}
+
+body{
+    color:rgba(0, 0, 0, 1);
+    text-align: left;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+/*Белый фон*/
+
+.description{
+    margin-left: 150px;
+    padding-bottom: 65px;
+}
+
+.Breadcrumb-item{
+    display: inline;
+    font-size: 24px;
+    vertical-align:top;
+}
+.Breadcrumb{
+    padding-top:30px;
+    padding-bottom: 30px; 
+}
+
+
+.card-item{
+vertical-align: baseline;
+
+}
+.pack-img{
+    height:520px;
+    width:520px;
+}
+.card_title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 24px;
+    padding-bottom:30px;
+    text-align: left;
+}
+
+.pack{
+    float: left;  
+    padding-right: 60px;    
+}
+
+.card-item-title{
+    padding-bottom:20px;
+    font-size: 40px;
+}
+
+.card-item-text{
+    width: 460px;
+    font-size: 26px;
+    line-height: 36px;
+    padding-bottom: 70px;
+}
+
+.card_box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quantity{
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+.gram-number{
+    font-size: 20px;
+    border: 1px solid #7a7b7e;
+    border-radius: 4px;
+    padding:10px;
+    filter: alpha(opacity=50);
+    opacity: 0.6;
+}
+
+.price{      
+    font-size: 30px;
+    line-height: 36px;
+    line-height: 67%;
+    margin-left: 60px;
+    margin-right: 115px;
+    font-weight: bolder;
+}
+
+.gram{
+    display:block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.quantity-number{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline;
+}
+
+.order{
+    display: flex;
+}
+
+.order-button{
+    font-size: 28px;
+    top:50%;
+    background-color:#293D38;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:10px;
+    min-height:57px; 
+    min-width: 170px;
+    cursor:pointer;
+}
+
+.counter{
+        display: flex;
+}
+
+.counternum{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btnplus{
+    background: transparent;
+    border: none !important;
+}
+.btnminus{
+    background: transparent;
+    border: none !important;
+}
+.order-line{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.order-text{
+    font-size: 26px;
+    padding-left: 54px;
+}
+
+.order-price{
+    padding-top: 10px;
+    padding-left: 60px;
+}
+.order-price .order-text{
+    background-image: url(../img/Bottom-page/box.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+/*Зеленый фон*/
+
+.sort{
+    background-color: #B8CFBE;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.sorting{
+    display:inline-block;
+    margin-left: 70px;
+    font-size: 20px;
+   
+}
+
+.s{
+    margin-bottom: 20px;
+}
+
+
+.sorting-text{
+    text-align: right;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.card_character{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progres_bar {
+    width: 250px;
+    height: 12px;
+    margin-left: 40px;
+    border: 1px solid #293d38;
+    align-items: center;
+  }
+  progress::-webkit-progress-value {
+    background: #293d38;
+  }
+  
+  progress::-webkit-progress-bar {
+    background: #f5f5f5;
+  }
+  
+  .sorting-txt{
+    display: block;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .wrap-grade{
+    display: flex;
+  }
+  .wrap-sort{
+    padding-top: 60px;
+    padding-bottom: 28px;
+  }
+
+  .wrap-right{
+    padding-right: 70px;
+  }
+
+.wrapper-descript{
+    display: grid;
+    grid-template-columns: 24em 421px;
+    justify-content:flex-start;
+    gap: 20px;
+    font-size: 26px;
+    align-items: center;
+    font-family: Marmelad;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-left: 150px;
+}
+
+.wrapp-descript{
+    display: flex;
+    align-items: center;
+}
+
+.t2-descript{
+    font-family: Marmelad;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;    
+    padding-bottom: 32px;
+}
+
+.wrap-beans_coffee{
+   z-index: -1;
+    
+}
+
+.wrapp-recomm{
+    display: flex;
+}
+
+.cup-coffee{
+    position: relative;
+    left: 70px;
+}
+
+.t2-recomm{
+    
+    font-family: Marmelad;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left; 
+    
+}
+
+.t2-title{
+    white-space: nowrap;
+    padding-bottom: 32px;
+}
+.list-recommendations{
+    width: 387px;
+}
+.wrapp-recommendations{
+    display: flex;
+    align-items: end;
+}
+
+#mores {
+    display: none;
+}
+
+/* -----------Обжаривание кофе (картинка)------------------------ */
+
+.wrap-image{
+    margin-bottom: 70px;
+}
+
+/* -----------Может понравиться---------------------------------- */
+
+.t2-like{
+    text-align: center;
+    margin-bottom: 70px;
+    font-family: Marmelad;
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.packs_of_coffee{
+    display: grid;
+    grid-template-columns: repeat(1,1200px);
+    justify-content: center;
+   
+}
+
+.collapsible{
+    height: 71px;
+    width: 214px;
+    font-family: Marmelad;
+    font-size: 26px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background: #293D38;
+    border-radius: 12px;
+    border: 1px solid #293D38;
+}
+
+#more {display: none;}
+
+.btn-position{
+    display: flex;
+    justify-content: center;
+}
+
+.block-photo_1, .block-photo_2{
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    margin-bottom: 70px;
+    justify-content: center;
+}
+
+.item-photo p{
+    font-family: Marmelad;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 20px;
+}
+
