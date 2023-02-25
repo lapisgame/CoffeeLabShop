@@ -4,6 +4,13 @@
 	cursor: pointer;
 	color: dimgray;
 }
+
+.btng_p{
+    font-size: 24px;
+    color: #39260A;
+    background-color: #cee8b92e;
+}
+
 .email {
     font-family: 'Marmelad';
     font-style: normal;

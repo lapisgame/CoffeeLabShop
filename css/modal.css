@@ -11,10 +11,12 @@
 }
 
 .btn-popup {
-	background-color: #F5F5F5;
+	background-color: #cee8b92e;
 	border: none;
 	cursor: pointer;
 	color: dimgray;
+	font-size: 16px;
+	color: #39260A;
 }
 
 .btn1-popup{
