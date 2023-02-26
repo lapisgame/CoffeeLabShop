@@ -106,7 +106,10 @@ optgroup{
 
 .card {
     min-height: 500px;
+    max-height: 500px;
     min-width: 270px;
+    max-width: 270px;
+
     box-sizing: border-box;
     border: 3px solid #bed2b5;
     box-shadow: 0px 4px 5px 3px rgba(0, 0, 0, 0.3);
@@ -120,7 +123,7 @@ optgroup{
   
   .card_title {
     padding: 20px;
-    width: 76px;
+    /*width: 76px;*/
     height: 14px;
     font-family: "Marmelad";
     font-style: normal;
@@ -133,6 +136,11 @@ optgroup{
     color: #000000;
   }
   
+  .card_img{
+    max-width: 156px;
+    max-height: 156px;
+  }
+
   .card_price {
     align-self: flex-end;
     margin: 20px 20px 10px 0px;

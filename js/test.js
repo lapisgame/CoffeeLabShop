@@ -1,71 +1,47 @@
-let btn = document.querySelector(".btn");
-
-let num = ""
-db.collection('Prod').doc("ProdNames").get().then((docs) => {
-    for (num in docs.data()){
-        console.log(num);
-    }
-}).then(() => {
-    document.querySelector("#createProduct").addEventListener('submit', e=>{
-        e.preventDefault();
-        saveData(num);
-    })
-    
-    document.querySelector("#draw").addEventListener('submit', e=>{
-        e.preventDefault();
-        drawProducts(document.querySelector("#nameDraw").value);
-    })
-})
-
 const form = document.querySelector("#createProduct")
 
-btn.addEventListener('click', e => {
+form.addEventListener('submit', e=>{
     e.preventDefault();
-    return db.collection('test').doc("1").set({
-        test: "Test"
-    }).then(() => {
-        Swal.fire({
-            icon: 'success',
-            title: 'Ок',
-        })
-    }).catch(() => {
-        Swal.fire({
-            icon: 'error',
-            title: 'Не ок'
-        })
-    })
+    saveData();
 })
 
-function saveData(number){
-    const form = document.querySelector("#createProduct")
+function saveData(){
+    const Name = form['name'].value;
+    const Bitterness = form['bitterness'].value;
+    const Density = form['density'].value;
+    const Acidity = form['acidity'].value;
+    const Discription = form['discription1'].value;
+    const Discription2 = form['discription2'].value;
+    const Image = form['image'].value;
+    const Grinding = form['grinding'].value;
+    const Price = form['price'].value;
+    const Compound = form['compound'].value;
+    const Recomendation = form['recomendation'].value;
+    const Stars = form['stars'].value;
+    const Country = form['country'].value;
 
-    const name = form['name'].value;
-    const dis = form['discription'].value;
-    const par1 = form['par1'].value;
-    const par2 = form['par2'].value;
-    const par3 = form['par3'].value;
-
-
-    let newnum = String(Number(number) + 1)
-
-    return db.collection('Prod').doc(name).set({
-        name,
-        dis,
-        par1,
-        par2,
-        par3
+    return db.collection('Prod').doc(Name).set({
+        Name,
+        Bitterness,
+        Density,
+        Acidity,
+        Discription,
+        Discription2,
+        Image,
+        Grinding,
+        Price,
+        Compound,
+        Recomendation,
+        Stars,
+        Country
     }).then(() => {
-        console.log(newnum);
-        db.collection('ProdNames').doc(newnum).set({
-            name
-        })
-    }).then(() => {
+        form.reset();
         Swal.fire({
             icon: 'success',
             title: 'Ок',
+            showConfirmButton: false,
+            timer: 1000
         })
-    }).then(() => {
-        drawProducts();
     }).catch(() => {
         Swal.fire({
             icon: 'error',

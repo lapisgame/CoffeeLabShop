@@ -9,18 +9,10 @@ if (page == null) page = 1
 
 page_selection = document.querySelector('.page_selection')
 
-
-///
-/////
-///////
-max_page = 6  // Нужно убрать после того, как будет сделана отрисовка товаров и будет понятно, сколько всего страниц
-//////
-/////
-///
-
 function makePageSelectionElem(required_page, elem_id, elem_text) {
+    const url = document.URL;
     var page_selection_link = document.createElement('a')
-    page_selection_link.setAttribute('href', current_location.origin + current_location.pathname + `?page=${required_page}`)
+    page_selection_link.setAttribute('href', current_location.origin + current_location.pathname + `?page=${required_page}&type=${(new URL(url)).searchParams.get('type')}`)
     page_selection_link.id = elem_id.toString()
 
     var page_selection_p_tag = document.createElement('p')
@@ -61,7 +53,7 @@ function makePageSelectionElems(current_page, max_page) {
         else if (current_element > max_page) break
 
         else {
-            makePageSelectionElem(current_element, current_element, current_element)          
+            makePageSelectionElem(current_element, current_element, current_element)
         }
     }
 }
@@ -82,8 +74,28 @@ function drawPageSelectionElems(max_page) {  // max_page - номер после
 
 
 
+db.collection('Prod').get().then((doc) => {
+    let max_page = 0
+    const url = document.URL;
+    const type = (new URL(url)).searchParams.get('type');
 
-drawPageSelectionElems(max_page)
+    for (let i = 0; i < doc.docs.length; ++i) {
+        if (doc.docs[i].data().Type === type) {
+            max_page++;
+        }
+    }
+
+    if (max_page % 6 === 0) {
+        max_page = max_page / 6;
+    }
+    else {
+        max_page = (max_page / 6) + 1;
+    }
+    //max_page = (doc.docs.length / 6) + (1 * doc.docs.length % 6);
+
+    drawPageSelectionElems(max_page)
+})
+
 
 
 

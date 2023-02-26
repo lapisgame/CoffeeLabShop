@@ -1,11 +1,29 @@
-const btng = document.querySelectorAll('.btng');
-const btnz = document.querySelectorAll('.btnz');
+const btng = document.querySelector('.btng');
+const btnz = document.querySelector('.btnz');
 const modaliOverlay = document.querySelector('.modali-overlay ');
 const modali = document.querySelectorAll('.modali');
-const closebb = document.querySelectorAll('.modal-close')
+const closebb = document.querySelector('.modal-close')
 
-btnz.forEach((el) => {
-	el.addEventListener('click', (e) => {
+const OPTForm = document.querySelector("#OPT-form");
+let email = "", Name = "", Phone = "";
+OPTForm.reset();
+
+btnz.addEventListener('click', (e) => {
+	e.preventDefault();
+	email = OPTForm['email'].value;
+	Name = OPTForm['Name'].value;
+	Phone = OPTForm['Phone'].value;
+
+	if (email !== "" && Name !== "" && Phone !== "") {
+		Email.send({
+			SecureToken : "11d92416-9d11-40f4-bd53-03ef5a48246b",
+			To : 'coffeelab56@gmail.com',
+			From : "coffeelab56@gmail.com",
+			Subject : "This is the subject",
+			Body : "And this is the body"
+		}).then(
+		  message => alert(message)
+		);
 		let path = e.currentTarget.getAttribute('data-path');
 
 		modali.forEach((el) => {
@@ -14,26 +32,33 @@ btnz.forEach((el) => {
 
 		document.querySelector(`[data-target="${path}"]`).classList.add('modali--visible');
 		modaliOverlay.classList.add('modali-overlay--visible');
-	});
+
+		OPTForm.reset();
+	}else{
+		Swal.fire({
+			icon: 'error',
+			title: 'Ошибка',
+			text: 'Введите корректные данные для связи',
+			showConfirmButton: false,
+            timer: 1500
+		})
+	}
 });
 
-btng.forEach((ell) => {
-	ell.addEventListener('click', (e) => {
-		let path = e.currentTarget.getAttribute('data-path');
+btng.addEventListener('click', (e) => {
+	let path = e.currentTarget.getAttribute('data-path');
 
-		modali.forEach((ell) => {
-			ell.classList.remove('modali--visible');
-		});
-
-		document.querySelector(`[data-target="${path}"]`).classList.add('modali--visible');
-		modaliOverlay.classList.add('modali-overlay--visible');
+	modali.forEach((ell) => {
+		ell.classList.remove('modali--visible');
 	});
+
+	document.querySelector(`[data-target="${path}"]`).classList.add('modali--visible');
+	modaliOverlay.classList.add('modali-overlay--visible');
 });
+
 
 
 modaliOverlay.addEventListener('click', (e) => {
-	console.log(e.target);
-
 	if (e.target == modaliOverlay) {
 		modaliOverlay.classList.remove('modali-overlay--visible');
 		modali.forEach((el) => {
@@ -43,17 +68,15 @@ modaliOverlay.addEventListener('click', (e) => {
 });
 
 
-closebb.forEach((elll) => {
-	elll.addEventListener('click', (e) => {
-
-		if (closebb) {
-			modaliOverlay.classList.remove('modali-overlay--visible');
-			modali.forEach((el) => {
-				el.classList.remove('modali--visible');
-			});
-		}
-	});
+closebb.addEventListener('click', (e) => {
+	if (closebb) {
+		modaliOverlay.classList.remove('modali-overlay--visible');
+		modali.forEach((el) => {
+			el.classList.remove('modali--visible');
+		});
+	}
 });
+
 
 
 

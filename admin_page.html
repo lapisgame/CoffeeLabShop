@@ -9,81 +9,49 @@
     <link rel="icon" href="img/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet">
 
-    <style>
-        .block{
-            margin: auto;
-            display: flex;
-            justify-content: space-around;
-            width: 300px;
-            height: 300px;
-            border: 1px solid black;
-            border-radius: 5px;
-        }
-
-        .row1{
-            max-width: 100px;
-            margin: auto 0;
-            border: 1px solid blue;
-        }
-
-        .row2{
-            max-width: 100px;
-            margin: auto 0;
-            border: 1px solid blueviolet;
-        }
-
-        .miniBlock{
-            width: 50px;
-            height: 50px;
-            border: 5px solid red;
-        }
-    </style>
-
 </head>
 <body>
-
-    <section id="boxberry">
-        <!--
-        <div class="block">
-            <div class="row1">
-                <h2 id="nameRow">Кофе 1</h2>
-                <p id="dis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam itaque eaque atque amet ratione nihil culpa!</p>
-            </div>
-            <div class="row2">
-                <div class="miniBlock" id="r1"></div>
-                <div class="miniBlock" id="r2"></div>
-                <div class="miniBlock" id="r3"></div>
-            </div>
-        </div>
-        -->
-    </section>
-
-
-    <button class="btn">Click</button>
-
     <form id="createProduct">
         <p>Name</p>
         <input type="text" id="name">
-
-        <p>Описание</p>
-        <input type="text" id="discription">
         
         <p>Горечь</p>
-        <input type="text" id="par1">
+        <input type="text" id="bitterness">
 
         <p>Плотность</p>
-        <input type="text" id="par2">
+        <input type="text" id="density">
 
         <p>Кислинка</p>
-        <input type="text" id="par3">
+        <input type="text" id="acidity">
+
+        <p>Описание 1</p>
+        <input type="text" id="discription1">
+
+        <p>Описание 2</p>
+        <input type="text" id="discription2">
+
+        <p>Картинка</p>
+        <input type="text" id="image">
+
+        <p>Помол</p>
+        <input type="text" id="grinding">
+
+        <p>Цена</p>
+        <input type="text" id="price">
+
+        <p>Состав</p>
+        <input type="text" id="compound">
+
+        <p>Рекомендации</p>
+        <input type="text" id="recomendation">
+
+        <p>Оценка</p>
+        <input type="text" id="stars">
+
+        <p>Страна</p>
+        <input type="text" id="country">
 
         <button type="submit">Отправить</button>
-    </form>
-
-    <form id="draw">
-        <input type="text" id="nameDraw">
-
-        <button>Draw</button>
     </form>
 
     <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>

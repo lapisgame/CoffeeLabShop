@@ -21,6 +21,8 @@
         <link
             href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css"
             rel="stylesheet">
+
+
     </head>
 
     <body>
@@ -55,9 +57,9 @@
                 <div class="nav-wrap">
                     <ul class="navbar">
                         <li class="item"><a class="a_header" href="#">ДОСТАВКА</a></li>
-                        <li class="item"><a class="a_header" href="catalog.html
-                                ">КАТАЛОГ</a></li>
-                        <li class="item"><button class="btng" data-path="get-popup"><p class="btng_p">ОПТ</p></button></li>
+                        <li class="item"><a class="a_header" href="catalog.html?page=1">КАТАЛОГ</a></li>
+                        <li class="item"><button class="btng"
+                                data-path="get-popup"><p class="btng_p">ОПТ</p></button></li>
                         <li class="item"><a class="a_header" href="blog.html">БЛОГ</a></li>
                         <li class="item"><a class="a_header" href="#">О НАС</a></li>
                         <li class="item"><a class="a_header" href="#">КОРЗИНА</a></li>
@@ -71,7 +73,7 @@
             <p class="current_page">
                 <a href="index.html">Главная</a>
                 /
-                <a href="catalog.html">Каталог</a>
+                <a href="catalog.html?page=1">Каталог</a>
             </p>
             <p class="catalog_title">Кофе свежей обжарки</p>
 
@@ -82,9 +84,9 @@
                     <p class="current_category_title">Зерновой кофе</p>
                     <div class="sidebar">
                         <p class="sidebar_name">Категория</p>
-                        <a href="#" class="category_name">Моносорта</a>
-                        <a href="#" class="category_name">Эспрессо-смеси</a>
-                        <a href="#" class="category_name">Specialty</a>
+                        <a href="catalog.html?page=1&type=mono" class="category_name">Моносорта</a>
+                        <a href="catalog.html?page=1&type=mix" class="category_name">Эспрессо-смеси</a>
+                        <a href="catalog.html?page=1&type=specialty" class="category_name">Specialty</a>
                     </div>
 
                 </div>
@@ -121,7 +123,7 @@
                                     <option value="bitterness">Горчинка</option>
                                     <option value="density">Плотность</option>
                                     <option value="acidity">Кислотность</option>
-                                    <option value="sweetness">Сладость</option>
+                                    <!--<option value="sweetness">Сладость</option>-->
                                 </optgroup>
 
                             </select>
@@ -134,155 +136,230 @@
 
                         <div class="cards_space">
 
-                            <div class="card">
-                                <div class="card_title">Fugace</div>
-                                <img src="img/catalog/Card_img.png"
+                            <div class="card hidden_card">
+                                <div class="card_title" id="name">Fugace</div>
+                                <img class="card_img" id="image" src="img/first_img.png"
                                     alt="Card_img">
-                                <div class="card_price">От 590 руб.</div>
+                                <div class="card_price">От <span id="price"></span></div>
                                 <div class="card_info">
-                                    <p>Состав: 100% Арабика</p>
-                                    <p>Помол: в зерне</p>
-                                    <p>Бразилия+Эфиопия</p>
+                                    <p id="compound">Состав: </p>
+                                    <p id="grinding">Помол: </p>
+                                    <p id="country"></p>
                                 </div>
 
-                                <img class="stars" src="img/catalog/5_stars.svg"
+                                <img class="stars" id="stars"
+                                    src="img/catalog/5_stars.svg"
                                     alt="5_stars">
 
-                                <div class="card_characters">Горчинка<progress
-                                        class="progress_bar" max="10" value="2"></progress></div>
-                                <div class="card_characters">Плотность<progress
-                                        class="progress_bar" max="10" value="8"></progress></div>
-                                <div class="card_characters">Кислотность<progress
-                                        class="progress_bar" max="10" value="5"></progress>
+                                <div class="card_characters">Горчинка
+                                    <progress id="bitterness"
+                                        class="progress_bar" max="250"
+                                        value="0">
+
+                                    </progress>
                                 </div>
-
-                                <button class="btn">Купить</button>
-                            </div>
-
-                            <div class="card">
-                                <div class="card_title">Fugace</div>
-                                <img src="img/catalog/Card_img.png"
-                                    alt="Card_img">
-                                <div class="card_price">От 590 руб.</div>
-                                <div class="card_info">
-                                    <p>Состав: 100% Арабика</p>
-                                    <p>Помол: в зерне</p>
-                                    <p>Бразилия+Эфиопия</p>
+                                <div class="card_characters">Плотность
+                                    <progress id="density"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
                                 </div>
-
-                                <img class="stars" src="img/catalog/2_stars.svg"
-                                    alt="2_stars">
-
-                                <div class="card_characters">Горчинка<progress
-                                        class="progress_bar" max="10" value="2"></progress></div>
-                                <div class="card_characters">Плотность<progress
-                                        class="progress_bar" max="10" value="8"></progress></div>
-                                <div class="card_characters">Кислотность<progress
-                                        class="progress_bar" max="10" value="5"></progress>
-                                </div>
-
-                                <button class="btn">Купить</button>
-                            </div>
-
-                            <div class="card">
-                                <div class="card_title">Fugace</div>
-                                <img src="img/catalog/Card_img.png"
-                                    alt="Card_img">
-                                <div class="card_price">От 590 руб.</div>
-                                <div class="card_info">
-                                    <p>Состав: 100% Арабика</p>
-                                    <p>Помол: в зерне</p>
-                                    <p>Бразилия+Эфиопия</p>
-                                </div>
-
-                                <img class="stars" src="img/catalog/1_stars.svg"
-                                    alt="1_stars">
-
-                                <div class="card_characters">Горчинка<progress
-                                        class="progress_bar" max="10" value="2"></progress></div>
-                                <div class="card_characters">Плотность<progress
-                                        class="progress_bar" max="10" value="8"></progress></div>
-                                <div class="card_characters">Кислотность<progress
-                                        class="progress_bar" max="10" value="5"></progress>
-                                </div>
-
-                                <button class="btn">Купить</button>
-                            </div>
-
-                            <div class="card">
-                                <div class="card_title">Fugace</div>
-                                <img src="img/catalog/Card_img.png"
-                                    alt="Card_img">
-                                <div class="card_price">От 590 руб.</div>
-                                <div class="card_info">
-                                    <p>Состав: 100% Арабика</p>
-                                    <p>Помол: в зерне</p>
-                                    <p>Бразилия+Эфиопия</p>
-                                </div>
-
-                                <img class="stars" src="img/catalog/3_stars.svg"
-                                    alt="3_stars">
-
-                                <div class="card_characters">Горчинка<progress
-                                        class="progress_bar" max="10" value="2"></progress></div>
-                                <div class="card_characters">Плотность<progress
-                                        class="progress_bar" max="10" value="8"></progress></div>
-                                <div class="card_characters">Кислотность<progress
-                                        class="progress_bar" max="10" value="5"></progress>
+                                <div class="card_characters">Кислотность
+                                    <progress id="acidity"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
                                 </div>
 
                                 <button class="btn">Купить</button>
                             </div>
 
                             <div class="card hidden_card">
-                                <div class="card_title">Fugace</div>
-                                <img src="img/catalog/Card_img.png"
+                                <div class="card_title" id="name">Fugace</div>
+                                <img class="card_img" id="image" src="img/first_img.png"
                                     alt="Card_img">
-                                <div class="card_price">От 590 руб.</div>
+                                <div class="card_price">От <span id="price"></span></div>
                                 <div class="card_info">
-                                    <p>Состав: 100% Арабика</p>
-                                    <p>Помол: в зерне</p>
-                                    <p>Бразилия+Эфиопия</p>
+                                    <p id="compound">Состав: </p>
+                                    <p id="grinding">Помол: </p>
+                                    <p id="country"></p>
                                 </div>
 
-                                <img class="stars" src="img/catalog/4_stars.svg"
-                                    alt="4_stars">
+                                <img class="stars" id="stars"
+                                    src="img/catalog/5_stars.svg"
+                                    alt="5_stars">
 
-                                <div class="card_characters">Горчинка<progress
-                                        class="progress_bar" max="10" value="2"></progress></div>
-                                <div class="card_characters">Плотность<progress
-                                        class="progress_bar" max="10" value="8"></progress></div>
-                                <div class="card_characters">Кислотность<progress
-                                        class="progress_bar" max="10" value="5"></progress>
+                                <div class="card_characters">Горчинка
+                                    <progress id="bitterness"
+                                        class="progress_bar" max="250"
+                                        value="0">
+
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Плотность
+                                    <progress id="density"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Кислотность
+                                    <progress id="acidity"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
                                 </div>
 
                                 <button class="btn">Купить</button>
                             </div>
-
                             <div class="card hidden_card">
-                                <div class="card_title">Fugace</div>
-                                <img src="img/catalog/Card_img.png"
+                                <div class="card_title" id="name">Fugace</div>
+                                <img class="card_img" id="image" src="img/first_img.png"
                                     alt="Card_img">
-                                <div class="card_price">От 590 руб.</div>
+                                <div class="card_price">От <span id="price"></span></div>
                                 <div class="card_info">
-                                    <p>Состав: 100% Арабика</p>
-                                    <p>Помол: в зерне</p>
-                                    <p>Бразилия+Эфиопия</p>
+                                    <p id="compound">Состав: </p>
+                                    <p id="grinding">Помол: </p>
+                                    <p id="country"></p>
                                 </div>
 
-                                <img class="stars" src="img/catalog/4_stars.svg"
-                                    alt="4_stars">
+                                <img class="stars" id="stars"
+                                    src="img/catalog/5_stars.svg"
+                                    alt="5_stars">
 
-                                <div class="card_characters">Горчинка<progress
-                                        class="progress_bar" max="10" value="2"></progress></div>
-                                <div class="card_characters">Плотность<progress
-                                        class="progress_bar" max="10" value="8"></progress></div>
-                                <div class="card_characters">Кислотность<progress
-                                        class="progress_bar" max="10" value="5"></progress>
+                                <div class="card_characters">Горчинка
+                                    <progress id="bitterness"
+                                        class="progress_bar" max="250"
+                                        value="0">
+
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Плотность
+                                    <progress id="density"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Кислотность
+                                    <progress id="acidity"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
                                 </div>
 
                                 <button class="btn">Купить</button>
                             </div>
+                            <div class="card hidden_card">
+                                <div class="card_title" id="name">Fugace</div>
+                                <img class="card_img" id="image" src="img/first_img.png"
+                                    alt="Card_img">
+                                <div class="card_price">От <span id="price"></span></div>
+                                <div class="card_info">
+                                    <p id="compound">Состав: </p>
+                                    <p id="grinding">Помол: </p>
+                                    <p id="country"></p>
+                                </div>
+
+                                <img class="stars" id="stars"
+                                    src="img/catalog/5_stars.svg"
+                                    alt="5_stars">
+
+                                <div class="card_characters">Горчинка
+                                    <progress id="bitterness"
+                                        class="progress_bar" max="250"
+                                        value="0">
+
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Плотность
+                                    <progress id="density"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Кислотность
+                                    <progress id="acidity"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
+                                </div>
+
+                                <button class="btn">Купить</button>
+                            </div>
+                            <div class="card hidden_card">
+                                <div class="card_title" id="name">Fugace</div>
+                                <img class="card_img" id="image" src="img/first_img.png"
+                                    alt="Card_img">
+                                <div class="card_price">От <span id="price"></span></div>
+                                <div class="card_info">
+                                    <p id="compound">Состав: </p>
+                                    <p id="grinding">Помол: </p>
+                                    <p id="country"></p>
+                                </div>
+
+                                <img class="stars" id="stars"
+                                    src="img/catalog/5_stars.svg"
+                                    alt="5_stars">
+
+                                <div class="card_characters">Горчинка
+                                    <progress id="bitterness"
+                                        class="progress_bar" max="250"
+                                        value="0">
+
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Плотность
+                                    <progress id="density"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Кислотность
+                                    <progress id="acidity"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
+                                </div>
+
+                                <button class="btn">Купить</button>
+                            </div>
+                            <div class="card hidden_card">
+                                <div class="card_title" id="name">Fugace</div>
+                                <img class="card_img" id="image" src="img/first_img.png"
+                                    alt="Card_img">
+                                <div class="card_price">От <span id="price"></span></div>
+                                <div class="card_info">
+                                    <p id="compound">Состав: </p>
+                                    <p id="grinding">Помол: </p>
+                                    <p id="country"></p>
+                                </div>
+
+                                <img class="stars" id="stars"
+                                    src="img/catalog/5_stars.svg"
+                                    alt="5_stars">
+
+                                <div class="card_characters">Горчинка
+                                    <progress id="bitterness"
+                                        class="progress_bar" max="250"
+                                        value="0">
+
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Плотность
+                                    <progress id="density"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
+                                </div>
+                                <div class="card_characters">Кислотность
+                                    <progress id="acidity"
+                                        class="progress_bar"
+                                        max="250" value="0">
+                                    </progress>
+                                </div>
+
+                                <button class="btn">Купить</button>
+                            </div>
+
 
                         </div>
 
@@ -471,53 +548,65 @@
         <div id="bb" class="modals">
             <div class="modali-overlay">
                 <div class="modali modal--1" data-target="los-popup">
-                    
-                <div class="lgn">
-                    <form id="Z-O-form" class="form center">
-                        <span class="span"><button class="modal-close" type="submit">&times;</button></span>
-                           <div>
-                            <h2 class="headerV" >СПАСИБО ЗА ОБРАЩЕНИЕ!</h2>
-                            <p class="pV" >Наш менеджер свяжется с Вами в ближайшее время!</p>
-                            
+
+                    <div class="lgn">
+                        <form id="Z-O-form" class="form center">
+                            <span class="span"><button class="modal-close"
+                                    type="submit">&times;</button></span>
+                            <div>
+                                <h2 class="headerV">СПАСИБО ЗА ОБРАЩЕНИЕ!</h2>
+                                <p class="pV">Наш менеджер свяжется с Вами в
+                                    ближайшее время!</p>
+
                                 <div>
-                                    <img class="img" src="img/Ellipse 15.png" alt="1">
+                                    <img class="img" src="img/Coffee_opt.png"
+                                        alt="1">
                                 </div>
-                           </div>
-                            
-    
-                              <div class="btnDV">
-                                 <div>
-                                     <button class="btnV" type="menu">Вернуться на главную</button>
-                                   </div>
-                              </div>
-                    </form>
-                </div>	
-    
+                            </div>
+
+
+                            <div class="btnDV">
+                                <div>
+                                    <button class="btnV" type="menu">Вернуться
+                                        на главную</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
                 <div class="modali modal--2" data-target="get-popup">
                     <form id="OPT-form" class="form center">
-                                    <span class="span"><button class="modal-close" type="submit">&times;</button></span>
+                        <span class="span"><button class="modal-close"
+                                type="submit">&times;</button></span>
                         <div class="">
-                                <h2  class="header" >Оставить заявку</h2>
+                            <h2 class="header">Оставить заявку</h2>
                             <div class="lip2">
-                            
-                                    <p>
-                                        <label class="labelse" for="Name">Ваше имя (обязательно):</label>
-                                        <input class="inputer" type="Name1" id="Name">
-                                    </p>
-                                    <p>
-                                        <label class="labelse" for="Phone">Ваш телефон (обязательно): </label>
-                                        <input class="inputer" type="Phone1" id="Phone">
-                                    </p>
-                                    <p>
-                                        <label class="labelse" for="email">Ваш Email :</label>
-                                        <input class="inputer" type="email" id="email">
-                                    </p>
-    
-                                <button class="btnz" type="submit" data-path="los-popup">Заказать оптом</button>
+
+                                <p>
+                                    <label class="labelse" for="Name">Ваше имя
+                                        (обязательно):</label>
+                                    <input class="inputer" type="Name1"
+                                        id="Name">
+                                </p>
+                                <p>
+                                    <label class="labelse" for="Phone">Ваш
+                                        телефон (обязательно): </label>
+                                    <input class="inputer" type="Phone1"
+                                        id="Phone">
+                                </p>
+                                <p>
+                                    <label class="labelse" for="email">Ваш Email
+                                        :</label>
+                                    <input class="inputer" type="email"
+                                        id="email">
+                                </p>
+
+                                <button class="btnz" type="submit"
+                                    data-path="los-popup">Заказать оптом</button>
                             </div>
-                        
-                        </div> 
+
+                        </div>
                     </form>
                 </div>
             </div>
@@ -525,9 +614,12 @@
 
     </body>
 
-    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
     <script>
         const firebaseConfig = {
             apiKey: "AIzaSyC9bYAt8YpnkLZMjQz01Dhm0_D6u5zs_RM",
@@ -549,6 +641,6 @@
     <script src="js/modal.js"></script>
     <script src="js/catalog.js"></script>
     <script src="js/modalOPT.js"></script>
-    <script src="js/modalOPT_S.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 </html>
