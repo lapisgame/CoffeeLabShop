@@ -2,10 +2,9 @@ const btng = document.querySelector('.btng');
 const btnz = document.querySelector('.btnz');
 const modaliOverlay = document.querySelector('.modali-overlay ');
 const modali = document.querySelectorAll('.modali');
-const closebb = document.querySelector('.modal-close')
+const closebb = document.querySelector('.modali-close')
 
 const OPTForm = document.querySelector("#OPT-form");
-let email = "", Name = "", Phone = "";
 OPTForm.reset();
 
 btnz.addEventListener('click', (e) => {
@@ -15,15 +14,6 @@ btnz.addEventListener('click', (e) => {
 	Phone = OPTForm['Phone'].value;
 
 	if (email !== "" && Name !== "" && Phone !== "") {
-		Email.send({
-			SecureToken : "11d92416-9d11-40f4-bd53-03ef5a48246b",
-			To : 'coffeelab56@gmail.com',
-			From : "coffeelab56@gmail.com",
-			Subject : "This is the subject",
-			Body : "And this is the body"
-		}).then(
-		  message => alert(message)
-		);
 		let path = e.currentTarget.getAttribute('data-path');
 
 		modali.forEach((el) => {
