@@ -19,6 +19,10 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap"
             rel="stylesheet">
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css"
+            rel="stylesheet">
     </head>
     <body>
         <header>
@@ -73,34 +77,30 @@
                 <div class="container">
                     <div class="Breadcrumb">
                         <a href="index.html"><p class="Breadcrumb-item">Главная/</h2></a>
-                        <a href="catalog.html?page=1&type=mix"><p
+                        <a id="bread1" href="catalog.html?page=1&type=mix"><p
                                 class="Breadcrumb-item">Каталог/</h2></a>
-                        <p class="Breadcrumb-item">Fugace</h2>
+                        <p id="bread2" class="Breadcrumb-item"></h2>
                     </div>
                     <div class="card">
                         <h2 class="card_title">Кофе свежей обжарки</h2>
                         <div class="card_box">
 
                             <div class="pack">
-                                <img src="img/Bottom-page/pack.png" alt="pack"
+                                <img id="img_main"
+                                    src="img/Bottom-page/pack.png" alt="pack"
                                     class="pack-img">
                             </div>
 
                             <div class="card">
                                 <p class="card-item">
-                                    <h2 class="card-item-title">
-                                        Fugace
-                                    </h2>
-                                    <div class="card-item-text">
-                                        Мягкий вкус с выраженными пряными нотами
-                                        и цветочными оттенками. Раскрывается
-                                        тонкими нотами цветов апельсинового
-                                        дерева и фруктового джема.
+                                    <h2 class="card-item-title" id="name_main"></h2>
+                                    <div class="card-item-text"
+                                        id="discription1">
                                     </div>
                                 </p>
                                 <div class="card-item">
                                     <span class="quantity">
-                                        <p class="price">590 руб</p>
+                                        <p class="price" id="price_main">590 руб</p>
                                     </span>
                                     <span class="quantity">
                                         <p class="gram">Вес</p>
@@ -111,16 +111,22 @@
                                     </span>
                                     <span class="quantity">
                                         <div class="counter">
-                                            <button class="btnplus"
-                                                id="buttonCountPlus" value="+"><img
-                                                    src="img/Bottom-page/plus.png"
-                                                    alt="+"></button>
+                                            <button class="btnminus"
+                                                id="buttonCountMinus" value="-">
+                                                <img
+                                                    src="img/Bottom-page/minus.png"
+                                                    alt="-">
+                                            </button>
+
                                             <div class="counternum"
                                                 id="buttonCountNumber">1</div>
-                                            <button class="btnminus"
-                                                id="buttonCountMinus" value="-"><img
-                                                    src="img/Bottom-page/minus.png"
-                                                    alt="-"></button>
+
+                                            <button class="btnplus"
+                                                id="buttonCountPlus" value="+">
+                                                <img
+                                                    src="img/Bottom-page/plus.png"
+                                                    alt="+">
+                                            </button>
                                         </div>
                                     </span>
                                 </div>
@@ -147,7 +153,7 @@
                         <div class="wrap-grade">
                             <div class="sorting-stars wrap-sort wrap-right">
                                 <div class="sorting-img">
-                                    <img src="img/Bottom-page/4_stars.svg"
+                                    <img id="stars_main" src=""
                                         alt="stars">
                                 </div>
                                 <p class="sorting-text">Средняя оценка</p>
@@ -156,27 +162,25 @@
 
                             <div class="sorting-bar wrap-sort wrap-sort
                                 wrap-right">
-                                <div class="card_character">Горчинка<progress
-                                        class="progres_bar" max="100"
-                                        value="20"></progress>
+                                <div class="card_character"><p id="par1"></p><progress
+                                        id="par1_prog"class="progres_bar" max="250"
+                                        value=""></progress>
                                 </div>
 
-                                <div class="card_character ">Плотность<progress
-                                        class="progres_bar" max="100"
-                                        value="80"></progress>
+                                <div class="card_character "><p id="par2"></p><progress
+                                        id="par2_prog" class="progres_bar" max="250"
+                                        value=""></progress>
                                 </div>
 
-                                <div class="card_character">Кислотность<progress
-                                        class="progres_bar" max="100"
-                                        value="50"></progress>
+                                <div class="card_character"><p id="par3"></p><progress
+                                        id="par3_prog" class="progres_bar" max="250"
+                                        value=""></progress>
                                 </div>
                             </div>
 
                             <div class="sorting-description wrap-sort">
-                                <span class="sorting-txt">Аромат: Темные ягоды,
-                                    орехи, тост, шоколад.</span>
-                                <span class="sorting-txt">Вкус: Темные и красные
-                                    ягоды, орехи, тост, шоколад, карамель</span>
+                                <span class="sorting-txt" id="short1"></span>
+                                <span class="sorting-txt" id="short2"></span>
                             </div>
                         </div>
                     </div>
@@ -189,7 +193,7 @@
                         <div class="wrapp-descript">
                             <div class="descript">
                                 <h2 class="t2-descript">Описание</h2>
-                                <p>
+                                <p id="discription2">
                                     Мастера сушат кофейные ягоды прямо в
                                     оболочке на солнце и постоянно
                                     переворачивают их для того, чтобы они
@@ -244,21 +248,24 @@
                         <div class="packs_of_coffee">
                             <div class="content">
                                 <div class="block-photo_1">
-                                    <a id="all1" href="#" class="item-photo flag">
+                                    <a id="all1" href="#" class="item-photo
+                                        flag">
                                         <img id="img"
                                             class="more_img"
                                             src=""
                                             alt="кофе">
                                         <p id="p"></p>
                                     </a>
-                                    <a id="all2" href="#" class="item-photo flag">
+                                    <a id="all2" href="#" class="item-photo
+                                        flag">
                                         <img id="img"
                                             class="more_img"
                                             src=""
                                             alt="кофе">
                                         <p id="p"></p>
                                     </a>
-                                    <a id="all3" href="#" class="item-photo flag">
+                                    <a id="all3" href="#" class="item-photo
+                                        flag">
                                         <img id="img"
                                             class="more_img"
                                             src=""
@@ -271,21 +278,24 @@
 
                                 <div id="more">
                                     <div class="block-photo_2">
-                                        <a id="all4" href="#" class="item-photo">
+                                        <a id="all4" href="#"
+                                            class="item-photo">
                                             <img id="img"
                                                 class="more_img"
                                                 src=""
                                                 alt="кофе">
                                             <p id="p"></p>
                                         </a>
-                                        <a id="all5" href="#" class="item-photo">
+                                        <a id="all5" href="#"
+                                            class="item-photo">
                                             <img id="img"
                                                 class="more_img"
                                                 src=""
                                                 alt="кофе">
                                             <p id="p"></p>
                                         </a>
-                                        <a id="all6" href="#" class="item-photo">
+                                        <a id="all6" href="#"
+                                            class="item-photo">
                                             <img id="img"
                                                 class="more_img"
                                                 src=""
