@@ -93,19 +93,32 @@ function drawSpec(){
     a.querySelector('#p').innerHTML = "Колумбия Киндио";
 }
 
+function preload(){
+    Swal.fire({
+        position: 'center',
+        icon: 'info',
+        title: 'Загружаем данные',
+        showConfirmButton: false,
+        timer: 2000
+    })
+}
+
 function load(name){
+    preload();
     db.collection('Prod').doc(name).get().then((el) => {
-        
         document.querySelector('#name_main').innerHTML = el.data().Name;
         document.querySelector('#img_main').setAttribute('src', `img/${el.data().Image}.png`);
         document.querySelector('#discription1').innerHTML = el.data().Discription;
+        document.querySelector('#bread2').innerHTML = el.data().Name;
+        document.querySelector('#bread1').setAttribute('href', `catalog.html?page=1&type=${el.data().Type}`);
         document.querySelector('#stars_main').setAttribute('src',`img/Bottom-page/${el.data().Stars}_stars.svg`);
 
         if (el.data().Type === "mix"){
             drawMix();
 
-            document.querySelector('#short1').innerHTML = `Состав: ${el.data().Compound}`
-            document.querySelector('#short2').innerHTML = `Помол: ${el.data().Grinding}`
+            document.querySelector('#short1').innerHTML = `Состав: ${el.data().Compound}`;
+            document.querySelector('#short2').innerHTML = `Помол: ${el.data().Grinding}`;
+            document.querySelector('#discription2').innerHTML = el.data().Discription2;
 
             let par = document.querySelector('#par1');
             let par_prog = document.querySelector('#par1_prog');
@@ -127,6 +140,7 @@ function load(name){
 
             document.querySelector('#short1').innerHTML = `Аромат: ${el.data().Smell}`
             document.querySelector('#short2').innerHTML = `Вкус: ${el.data().Taste}`
+            document.querySelector('#discription2').innerHTML = el.data().Discription2;
 
             let par = document.querySelector('#par1');
             let par_prog = document.querySelector('#par1_prog');
@@ -171,3 +185,7 @@ function load(name){
 
 let name = (new URL(document.URL)).searchParams.get('name');
 load(name);
+
+document.querySelector('.order-button').addEventListener('click', () => {
+    alert(document.querySelector('.gram-number').value);
+})
