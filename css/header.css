@@ -1,3 +1,6 @@
+header{
+    min-width: 1300px;
+}
 
 .header-wrap{
     display: flex;
