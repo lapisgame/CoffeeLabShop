@@ -7,7 +7,9 @@
 
 body{
     color:rgba(0, 0, 0, 1);
-    text-align: left;
+    /*text-align: left;*/
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 .more_img{
