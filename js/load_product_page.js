@@ -112,7 +112,7 @@ function load(name){
         document.querySelector('#bread2').innerHTML = el.data().Name;
         document.querySelector('#bread1').setAttribute('href', `catalog.html?page=1&type=${el.data().Type}`);
         document.querySelector('#stars_main').setAttribute('src',`img/Bottom-page/${el.data().Stars}_stars.svg`);
-        document.querySelector('#price_main').innerHTML = el.data().Price;
+        document.querySelector('#price_main').innerHTML = el.data().Price + ' руб';
 
         if (el.data().Type === "mix"){
             drawMix();
