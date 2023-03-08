@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CoFFeeLab</title>
+        <title>Корзина</title>
 
+        <link rel="stylesheet" href="css/shopcard.css">
         <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/slider.css">
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/modal.css">
         <link rel="stylesheet" href="css/modalOPT.css">
 
         <link rel="icon" href="img/favicon.ico">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap"
+            rel="stylesheet">
+
         <link
             href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css"
             rel="stylesheet">
-
     </head>
     <body>
         <header>
@@ -56,7 +60,8 @@
                         <li class="item"><button class="btng"
                                 data-path="get-popup"><p class="btng_p">ОПТ</p></button></li>
                         <li class="item"><a class="a_header" href="blog.html">БЛОГ</a></li>
-                        <li class="item"><a class="a_header" href="#anchor">О НАС</a></li>
+                        <li class="item"><a class="a_header" href="#anchor">О
+                                НАС</a></li>
                         <li class="item"><a class="a_header" href="#">КОРЗИНА</a></li>
                     </ul>
                 </div>
@@ -64,163 +69,55 @@
         </header>
 
         <main>
-            <section class="assortment">
-                <div class="container">
-                    <div class="card-box">
-                        <div class="specialty card-item">
-                            <a href="catalog.html?page=1&type=specialty">
-                                <img src="img/main/coffeebeans.png"
-                                    alt="coffeebeans">
-                                <div class="rectangle">
-                                    <p class="card-title">SPECIALTY</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="espresso-blends card-item">
-                            <a href="catalog.html?page=1&type=mix">
-                                <img src="img/main/coffeebeans.png"
-                                    alt="coffeebeans">
-                                <div class="rectangle">
-                                    <p class="card-title">ЭСПРЕССО-СМЕСИ</p>
-                                </div>
-                            </a>
-
-                        </div>
-                        <div class="monosort card-item">
-                            <a href="catalog.html?page=1&type=mono">
-                                <img src="img/main/coffeebeans.png"
-                                    alt="coffeebeans">
-                                <div class="rectangle">
-                                    <p class="card-title">МОНОСОРТА</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+            <div class="container">
+                <div class="info">
+                    <p class="addres_text">Главная/Корзина</p>
                 </div>
-            </section>
 
-            <section class="slider">
-                <div class="container">
-                    <div class="slider_box">
-                        <h2 class="slider_head">Акции</h2>
-                        <div class="itc-slider" data-slider="itc-slider"
-                            data-loop="true" data-autoplay="false">
-                            <div class="itc-slider__wrapper">
-                                <div class="itc-slider__items">
-                                    <div class="itc-slider__item">
-                                        <img class="slider_img"
-                                            src="img/slider/coffe1.png"
-                                            alt="coffe1">
-                                        <div class="img_txt_box">
-                                            <p class="img_txt">СКИДКИ НА КОФЕ ДО
-                                                30%</p>
-                                        </div>
-                                    </div>
-                                    <div class="itc-slider__item">
-                                        <img class="slider_img"
-                                            src="img/slider/coffe2.png"
-                                            alt="coffe2">
-                                        <div class="img_txt_box">
-                                            <p class="img_txt">БАЛЛЫ ЗА ПОДПИСКУ</p>
-                                        </div>
-                                    </div>
-                                    <div class="itc-slider__item">
-                                        <img class="slider_img"
-                                            src="img/slider/coffe3.png"
-                                            alt="coffe3">
-                                        <div class="img_txt_box">
-                                            <p class="img_txt">СКИДКИ ОПТОВИКАМ</p>
-                                        </div>
-                                    </div>
-                                    <div class="itc-slider__item">
-                                        <img class="slider_img"
-                                            src="img/slider/coffe4.png"
-                                            alt="coffe3">
-                                        <div class="img_txt_box">
-                                            <p class="img_txt">КОФЕЙНЫЕ НАБОРЫ</p>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="cardspace">
+                    <div class="card">
+                        <div class="img_close">
+                            <img id="" src="img/close.png" alt="close">
+                        </div>
+                        <div class="coffee_box_img">
+                            <img src="img/coffe_box.png" alt="coffe_box">
+                        </div>
+                        <div class=".card_short_text">
+                            <h3 class="short_head">Кофе1</h3>
+                            <p class="short_text">300г</p>
+                        </div>
+                        <div class="btn_wrapper">
+                            <div class="counter">
+                                <button class="btnminus" id="buttonCountMinus" onclick="minus(1)"><img src="img/Bottom-page/minus.png" alt="-"></button>
+                                <div class="counternum" id="count1">1</div>
+                                <button class="btnplus" id="buttonCountPlus" onclick="plus(1)"><img src="img/Bottom-page/plus.png" alt="+ "></button>
                             </div>
-
-                            <button class="itc-slider__btn
-                                itc-slider__btn_prev">
-                                <img src="img/slider/btn_prev.png" alt="">
-                            </button>
-
-                            <button class="itc-slider__btn
-                                itc-slider__btn_next">
-                                <img src="img/slider/btn_next.png" alt="">
-                            </button>
-
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section class="chooseUs" id="anchor">
-                <div class="container">
-                    <div class="chooseUs-box">
-                        <h2 class="chooseUs-title">Почему стоит выбрать нас?</h2>
-                        <ul class="list-container">
-                            <li class="list list-wrap img-coffecup">
-                                <p class="list-text">ВСЕГДА СВЕЖАЯ ОБЖАРКА</p>
-                            </li>
-                            <li class="list list-wrap img-checkcircle">
-                                <p class="list-text">ЛУЧШИЕ ЦЕНЫ НА ПРОДУКЦИЮ</p>
-                            </li>
-                            <li class="list list-wrap img-package">
-                                <p class="list-text">ОПТОВЫЕ ПОСТАВКИ</p>
-                            </li>
-                            <li class="list list-wrap img-dollar">
-                                <p class="list-text">СКИДКИ НА ПЕРЫЙ ЗАКАЗ</p>
-                            </li>
-                        </ul>
+                <div class="info_time">
+                    <div class="blog">
+                        <h3 class="time_head1">ОБЖАРКА ПЛАНИРУЕТСЯ</h3>
+                        <p class="time_text1">10 февраля 15:00 МСК</p>
+                    </div>
+                    <div class="blog">
+                        <h3 class="time_head2">ОТПРАВКА</h3>
+                        <p class="time_text2">11 ФЕВРАЛЯ</p>
                     </div>
                 </div>
-
-            </section>
-
-            <section class="description">
-                <div class="container">
-                    <h2 class="description-title">О компании</h2>
-                    <div class="description-box">
-                        <p class="description-text">
-                            <span class="span-text">
-                                #CoFFeLab: качественно создаем кофе
-                            </span>
-                            <span class="span-text">
-                                Мы - производители зернового кофе. Обжариваем
-                                зеленый кофе из стран мира, таких как Бразилия,
-                                Колумбия, Коста-Рика, стран Африки и Евразии.
-                                Создаем смеси и фасуем их в упаковки. Делаем
-                                вкусный кофе свежей обжарки доступным.
-                            </span>
-                            <span class="span-text">
-                                Наше преимущество - мы эксперты в том, что
-                                делаем: нами движет стремление к совершенству,
-                                мы сами ищем кофе в странах произрастания,
-                                следим за качеством того, как и где выращивали
-                                кофе до чашки, обжариваем на ростере Gisen,
-                                проводим каппинги с участием Q-грейдеров,
-                                общаемся с экспертами кофе и следим за
-                                тенденциями!
-                            </span>
-                        </p>
-
-                        <div class="description-img">
-                            <img src="img/main/differentcoffeebeans.png"
-                                alt="differentcoffeebeans">
-                        </div>
-                    </div>
-
+                <div class="text_box">
+                    <input class="text_coment" placeholder="Оставьте комментарий" type="text">
                 </div>
-            </section>
+                <div class="but_wrap">
+                    <button class="but_box">Купить</button>
+                </div>
+                <div class="discount_wrap">
+                    <p class="discount_text">Закажите еще на 3755 руб и получите скидку 5% на следующий заказ</p>
+                </div>
+            </div>
         </main>
 
-        <div class="wrap">
-            <img src="img/footer/footer_coffee.png" class="coffee_img">
-        </div>
 
         <footer>
             <div class="footer_block wrap">
@@ -338,9 +235,6 @@
             </div>
         </footer>
 
-
-
-
         <div class="modals">
             <div class="modal-overlay">
                 <div class="modal modal--1" data-target="form-popup">
@@ -398,8 +292,6 @@
 
                     <div class="lgn">
                         <form id="Z-O-form" class="form center">
-                            <!--<span class="span"><button class="modali-close"
-                                    type="submit">&times;</button></span>-->
                             <div>
                                 <h2 class="headerV">СПАСИБО ЗА ОБРАЩЕНИЕ!</h2>
                                 <p class="pV">Наш менеджер свяжется с Вами в
@@ -424,8 +316,6 @@
                 </div>
                 <div class="modali modali--2" data-target="get-popup">
                     <form id="OPT-form" class="form center">
-                        <!--<span class="span"><button class="modali-close"
-                                type="submit">&times;</button></span>-->
                         <div class="">
                             <h2 class="header">Оставить заявку</h2>
                             <div class="lip2">
@@ -460,8 +350,6 @@
         </div>
     </body>
 
-
-
     <script
         src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
     <script
@@ -485,10 +373,9 @@
     </script>
     <script defer src="js/login.js"></script>
     <script defer src="js/reg.js"></script>
-    <script defer src="js/load_product.js"></script>
-    <script defer src="js/slider.js"></script>
     <script defer src="js/modal.js"></script>
     <script src="js/modalOPT.js"></script>
+    <script src="js/shopcard.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 </html>
