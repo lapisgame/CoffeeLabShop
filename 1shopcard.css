@@ -1,9 +1,17 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+    font-family: 'Marmelad';
+    font-style: normal;
+    box-sizing: border-box;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
 }
 
-.bread {
+.info {
     margin-left: 136px;
     margin-top: 70px;
     margin-bottom: 108px;
