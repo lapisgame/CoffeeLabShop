@@ -2,7 +2,6 @@ const btng = document.querySelector('.btng');
 const btnz = document.querySelector('.btnz');
 const modaliOverlay = document.querySelector('.modali-overlay ');
 const modali = document.querySelectorAll('.modali');
-const closebb = document.querySelector('.modali-close')
 
 const OPTForm = document.querySelector("#OPT-form");
 OPTForm.reset();
@@ -56,19 +55,3 @@ modaliOverlay.addEventListener('click', (e) => {
 		});
 	}
 });
-
-
-closebb.addEventListener('click', (e) => {
-	if (closebb) {
-		modaliOverlay.classList.remove('modali-overlay--visible');
-		modali.forEach((el) => {
-			el.classList.remove('modali--visible');
-		});
-	}
-});
-
-
-
-
-
-
