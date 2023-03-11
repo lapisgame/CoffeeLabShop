@@ -22,6 +22,7 @@
     width: 1087px;
     height: 437px;
     position: relative;
+    margin: 0 auto 20px auto;
 }
 
 .img_close {
@@ -83,6 +84,7 @@
 .info_time {
     padding-top: 96px;
     display: flex;
+    justify-content: space-around;
 }
 
 .time_head1 {
@@ -136,6 +138,7 @@
     font-size: 32px;
     line-height: 14px;
     border: none;
+    margin: 0 auto;
 }
 
 .but_wrap {
