@@ -187,6 +187,8 @@ function load(name) {
 let name = (new URL(document.URL)).searchParams.get('name');
 load(name);
 
+/*
 document.querySelector('.order-button').addEventListener('click', () => {
     alert(document.querySelector('.gram-number').value);
 })
+*/
