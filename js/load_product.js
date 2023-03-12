@@ -25,7 +25,7 @@ function render(minIndex, maxIndex, type) {
                             }
                             thisCard.querySelector("#name").innerHTML = elem.data().Name;
                             thisCard.querySelector("#image_img").setAttribute("src", `img/${elem.data().Image}.png`);
-                            thisCard.querySelector('#image_a').setAttribute("href", `Product_page.html?name=${elem.data().Name}`);
+                            thisCard.querySelector('#image_a').setAttribute("href", `Product_page.html?name=${elem.data().Name}&type=${elem.data().Type}`);
                             thisCard.querySelector("#price").innerHTML = elem.data().Price + " руб";
                             thisCard.querySelector("#grinding").innerHTML = "Помол: " + elem.data().Grinding;
                             thisCard.querySelector("#stars").setAttribute("src", `img/catalog/${elem.data().Stars}_stars.svg`);

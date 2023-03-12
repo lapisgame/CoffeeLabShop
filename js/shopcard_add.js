@@ -14,7 +14,8 @@ if (uurl.href.indexOf('Product_page.html') > 0){
             Name : document.querySelector("#name_main").innerHTML,
             Price : document.querySelector("#price_main").innerHTML,
             Count : document.querySelector('#buttonCountNumber').innerHTML,
-            Massa : document.querySelector('.gram-number').value
+            Massa : document.querySelector('.gram-number').value,
+            Type : (new URL(url)).searchParams.get('type')
         }];
 
         let order = localStorage.getItem('order');
