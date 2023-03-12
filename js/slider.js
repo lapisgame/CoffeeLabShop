@@ -138,9 +138,8 @@ class ItcSlider {
       el.style.transform = "";
       el.classList.remove(activeClass);
     });
-    const selIndicators = `${this.#state.prefix}${
-      this.constructor.#EL_INDICATOR_ACTIVE
-    }`;
+    const selIndicators = `${this.#state.prefix}${this.constructor.#EL_INDICATOR_ACTIVE
+      }`;
     document.querySelectorAll(`.${selIndicators}`).forEach((el) => {
       el.classList.remove(selIndicators);
     });

@@ -24,15 +24,15 @@ button_out.innerHTML = "ВЫЙТИ";
 button_out.style = "margin-left: 15px"
 
 auth.onAuthStateChanged((user) => {
-    if (user) {
-        document.querySelectorAll('[attribute_flag = "rem"]').forEach(e => {
+	if (user) {
+		document.querySelectorAll('[attribute_flag = "rem"]').forEach(e => {
 			e.remove();
 		});
-        document.querySelector(".head_autz").appendChild(button_lk);
-		if (user.email === "admin@admin.ru"){
+		document.querySelector(".head_autz").appendChild(button_lk);
+		if (user.email === "admin@admin.ru") {
 			button_lk.setAttribute("href", "admin_page.html");
 		}
-		else{
+		else {
 			button_lk.setAttribute("href", "Personal_Area.html");
 		}
 		document.querySelector(".head_autz").appendChild(button_out);
@@ -42,36 +42,36 @@ auth.onAuthStateChanged((user) => {
 			e.preventDefault();
 			auth.signOut();
 			localStorage.setItem('flagLogin', false);
-            localStorage.setItem('coffeeLoginEmail', "");
-            localStorage.setItem('coffeeLoginPassword', "");
+			localStorage.setItem('coffeeLoginEmail', "");
+			localStorage.setItem('coffeeLoginPassword', "");
 		})
-    }
-    else{
-        document.querySelectorAll('[attribute_flag = "rem"]').forEach(e => {
+	}
+	else {
+		document.querySelectorAll('[attribute_flag = "rem"]').forEach(e => {
 			e.remove();
 		});
-		if (document.querySelector(".btn_out") !== null){
+		if (document.querySelector(".btn_out") !== null) {
 			document.querySelector(".btn_out").remove();
 		}
-		
-		if (document.querySelector("#log_btn") !== null){
+
+		if (document.querySelector("#log_btn") !== null) {
 			document.querySelector("#log_btn").remove();
 		}
 
-        document.querySelector(".head_autz").appendChild(button_login);
-        btns = document.querySelector(".btn-popup")
+		document.querySelector(".head_autz").appendChild(button_login);
+		btns = document.querySelector(".btn-popup")
 
 		btns.addEventListener('click', (e) => {
 			let path = e.currentTarget.getAttribute('data-path');
-		
+
 			modals.forEach((el) => {
 				el.classList.remove('modal--visible');
 			});
-		
+
 			document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
 			modalOverlay.classList.add('modal-overlay--visible');
 		});
-    }
+	}
 });
 
 modalOverlay.addEventListener('click', (e) => {

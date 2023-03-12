@@ -1,6 +1,6 @@
 const loginForm = document.querySelector('#login-form');
 
-function hide(){
+function hide() {
     let modalOverlay = document.querySelector('.modal-overlay ');
     let modals = document.querySelectorAll('.modal');
 
@@ -10,12 +10,12 @@ function hide(){
     });
 }
 
-function loginWithEmailAndPassword(loginEmail, loginPassword, pushFlag){
-    if (loginEmail !== '' && loginPassword !== ''){
+function loginWithEmailAndPassword(loginEmail, loginPassword, pushFlag) {
+    if (loginEmail !== '' && loginPassword !== '') {
         auth.signInWithEmailAndPassword(loginEmail, loginPassword).then(() => {
             hide();
             loginForm.reset();
-            if (pushFlag){
+            if (pushFlag) {
                 Swal.fire({
                     position: 'top',
                     icon: 'success',
@@ -27,9 +27,9 @@ function loginWithEmailAndPassword(loginEmail, loginPassword, pushFlag){
             localStorage.setItem('flagLogin', true);
             localStorage.setItem('coffeeLoginEmail', loginEmail);
             localStorage.setItem('coffeeLoginPassword', loginPassword);
-            
+
         }).catch(err => {
-            if (err.code === 'auth/user-not-found'){
+            if (err.code === 'auth/user-not-found') {
                 Swal.fire({
                     icon: 'error',
                     title: 'Ошибка',
@@ -37,15 +37,15 @@ function loginWithEmailAndPassword(loginEmail, loginPassword, pushFlag){
                 })
                 loginForm.reset();
             }
-            else{
+            else {
                 console.log(err.message);
             }
         })
     }
 }
 
-function tryLoginFromLocalStogage(){
-    if (localStorage.getItem('flagLogin')){
+function tryLoginFromLocalStogage() {
+    if (localStorage.getItem('flagLogin')) {
         loginWithEmailAndPassword(localStorage.getItem('coffeeLoginEmail'), localStorage.getItem('coffeeLoginPassword'), false);
     }
 }

@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoFFeeLab Админка</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CoFFeeLab Админка</title>
 
-    <link rel="icon" href="img/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet">
+        <link rel="icon" href="img/favicon.ico">
+        <link
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css"
+            rel="stylesheet">
 
-</head>
-<body>
-    <form id="createProduct">
-        <p>Name</p>
-        <input type="text" id="name">
-        
-        <p>Горечь</p>
-        <input type="text" id="bitterness">
+    </head>
+    <body>
+        <form id="createProduct">
+            <p>Name</p>
+            <input type="text" id="name">
 
-        <p>Плотность</p>
-        <input type="text" id="density">
+            <p>Горечь</p>
+            <input type="text" id="bitterness">
 
-        <p>Кислинка</p>
-        <input type="text" id="acidity">
+            <p>Плотность</p>
+            <input type="text" id="density">
 
-        <p>Описание 1</p>
-        <input type="text" id="discription1">
+            <p>Кислинка</p>
+            <input type="text" id="acidity">
 
-        <p>Описание 2</p>
-        <input type="text" id="discription2">
+            <p>Описание 1</p>
+            <input type="text" id="discription1">
 
-        <p>Картинка</p>
-        <input type="text" id="image">
+            <p>Описание 2</p>
+            <input type="text" id="discription2">
 
-        <p>Помол</p>
-        <input type="text" id="grinding">
+            <p>Картинка</p>
+            <input type="text" id="image">
 
-        <p>Цена</p>
-        <input type="text" id="price">
+            <p>Помол</p>
+            <input type="text" id="grinding">
 
-        <p>Состав</p>
-        <input type="text" id="compound">
+            <p>Цена</p>
+            <input type="text" id="price">
 
-        <p>Рекомендации</p>
-        <input type="text" id="recomendation">
+            <p>Состав</p>
+            <input type="text" id="compound">
 
-        <p>Оценка</p>
-        <input type="text" id="stars">
+            <p>Рекомендации</p>
+            <input type="text" id="recomendation">
 
-        <p>Страна</p>
-        <input type="text" id="country">
+            <p>Оценка</p>
+            <input type="text" id="stars">
 
-        <button type="submit">Отправить</button>
-    </form>
+            <p>Страна</p>
+            <input type="text" id="country">
 
-    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
-    <script>
+            <button type="submit">Отправить</button>
+        </form>
+
+        <script
+            src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+        <script>
         const firebaseConfig = {
             apiKey: "AIzaSyC9bYAt8YpnkLZMjQz01Dhm0_D6u5zs_RM",
             authDomain: "coffee-lab-d99f7.firebaseapp.com",
@@ -72,7 +77,8 @@
         const auth = firebase.auth();
         const db = firebase.firestore();
     </script>
-    <script src="js/test.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
-</body>
+        <script src="js/test.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+    </body>
 </html>

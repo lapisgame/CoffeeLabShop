@@ -23,13 +23,13 @@ btnz.addEventListener('click', (e) => {
 		modaliOverlay.classList.add('modali-overlay--visible');
 
 		OPTForm.reset();
-	}else{
+	} else {
 		Swal.fire({
 			icon: 'error',
 			title: 'Ошибка',
 			text: 'Введите корректные данные для связи',
 			showConfirmButton: false,
-            timer: 1500
+			timer: 1500
 		})
 	}
 });

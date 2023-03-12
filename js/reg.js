@@ -1,10 +1,10 @@
 const signupForm = document.querySelector("#signup-form"); //ФОРМА РЕГИСТРАЦИИ
 
-signupForm['email'].addEventListener('change', e=>{
+signupForm['email'].addEventListener('change', e => {
     e.style = 'background-color: red';
 })
 
-function hide(){
+function hide() {
     let modalOverlay = document.querySelector('.modal-overlay ');
     let modals = document.querySelectorAll('.modal');
 
@@ -14,22 +14,22 @@ function hide(){
     });
 }
 
-signupForm.addEventListener('submit', e=> {
+signupForm.addEventListener('submit', e => {
     e.preventDefault();
     const email = signupForm['email'].value.trim();
     const pass1 = signupForm['password1'].value.trim();
     const pass2 = signupForm['password2'].value.trim();
 
-    if (pass1 !== '' && pass2 !== '' && pass1 === pass2){
-        auth.createUserWithEmailAndPassword(email,pass1).then(cred => {
+    if (pass1 !== '' && pass2 !== '' && pass1 === pass2) {
+        auth.createUserWithEmailAndPassword(email, pass1).then(cred => {
             return db.collection('users').doc(cred.user.uid).set({
-                email, 
+                email,
                 password: pass1,
                 phone: "",
                 addres: ""
             }).then(() => {
                 hide();
-                
+
                 Swal.fire({
                     position: 'top',
                     icon: 'success',
@@ -49,7 +49,7 @@ signupForm.addEventListener('submit', e=> {
                         text: 'Пользователь с такой почтой уже существует'
                     })
                 }
-                else{
+                else {
                     console.log(err.message);
                 }
             })
@@ -61,9 +61,9 @@ signupForm.addEventListener('submit', e=> {
                     text: 'Пользователь с такой почтой уже существует'
                 })
             }
-            else{
+            else {
                 console.log(err.message);
             }
         })
-    }   
+    }
 })

@@ -1,11 +1,11 @@
 const form = document.querySelector("#createProduct")
 
-form.addEventListener('submit', e=>{
+form.addEventListener('submit', e => {
     e.preventDefault();
     saveData();
 })
 
-function saveData(){
+function saveData() {
     const Name = form['name'].value;
     const Bitterness = form['bitterness'].value;
     const Density = form['density'].value;
@@ -50,12 +50,12 @@ function saveData(){
     })
 }
 
-function drawProducts(name){
+function drawProducts(name) {
     let box = document.querySelector("#boxberry");
 
     let block = document.createElement('div')
     block.className = "block"
-    
+
     let b1 = document.createElement('div')
     b1.className = "row1"
     let b2 = document.createElement('div')

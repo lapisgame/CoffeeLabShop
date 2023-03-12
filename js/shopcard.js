@@ -1,4 +1,4 @@
-function plus(x){
+function plus(x) {
   let count = document.querySelector(`#count${x}`);
   let number = +count.innerHTML;
 
@@ -8,10 +8,10 @@ function plus(x){
   }
 }
 
-function minus(x){
+function minus(x) {
   let count = document.querySelector(`#count${x}`);
   let number = +count.innerHTML;
-  
+
   if (number >= 2) {
     number--;
     count.innerHTML = number;
