@@ -9,7 +9,7 @@ function identic(a,b){
 let uurl = (new URL(document.URL));
 
 if (uurl.href.indexOf('Product_page.html') > 0){
-    document.querySelector('.order-button').addEventListener('click', () => {
+    document.querySelector('#order-button').addEventListener('click', () => {
         let newOrder = [{
             Name : document.querySelector("#name_main").innerHTML,
             Price : document.querySelector("#price_main").innerHTML,
