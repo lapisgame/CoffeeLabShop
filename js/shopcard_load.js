@@ -73,8 +73,72 @@ function createEl(number, nameImg, name, massa, count) {
     card_space.appendChild(card);
 }
 
-function remove(number) {
-    console.log(number);
+function isEmpty(order){
+    for (let i in order){
+        if (typeof order[i] !== 'undefined' && order[i].length > 0){
+            return false;
+        }
+    }
+    return true;
 }
 
-createEl(2, "first", "Арабика", "250г", "2");
+function remove(number) {
+    let card_space = document.querySelector('.cardspace');
+    card_space.removeChild(document.querySelector(`#count${number}`).parentElement.parentElement.parentElement);
+
+    let order = JSON.parse(localStorage.getItem('order'));
+    order[number] = {};
+    if (isEmpty(order)){
+        order = [{}];
+    }
+    localStorage.setItem('order', JSON.stringify(order));
+}
+
+function clearEl(){
+    let card_space = document.querySelector('.cardspace');
+    while (document.querySelectorAll(".card").length){
+        card_space.removeChild(document.querySelector(".card"));
+    }
+}
+
+function addDays(date, days) {
+    var result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+}
+
+function setdate(){
+    const monthNames = ["ЯНВАРЯ", "ФЕВРАЛЯ", "МАРТА", "АПРЕЛЯ", "МАЯ", "ИЮНЯ", "ИЮЛЯ", "АВГУСТА", "СЕНТЯБРЯ", "ОКТЯБРЯ", "НОЯБРЯ", "ДЕКАБРЯ"];
+
+    let date = new Date();
+    date = addDays(date, 3);
+
+    document.querySelector(".time_text2").innerHTML = (date.getDate() + " " + monthNames[date.getMonth()]);
+}
+
+function nameImgParse(type){
+    if (type === "mix"){
+        return "first";
+    } else if (type === "mono"){
+        return "second";
+    } else {
+        return "third";
+    }
+}
+
+function render(){
+    clearEl();
+    let order = JSON.parse(localStorage.getItem('order'));
+    if (order !== null){
+        for (let i in order){
+            if (i !== 0){
+                let this_ord = order[i][0];
+                if (this_ord !== undefined){
+                    createEl(i, nameImgParse(this_ord["Type"]), this_ord["Name"], this_ord["Massa"], this_ord["Count"]);
+                }
+            }
+        }
+    }
+}
+
+render();

@@ -9,7 +9,8 @@ function identic(a, b) {
 function addToLocalStorage(newOrder) {
     let order = localStorage.getItem('order');
     if (order === null) {
-        order = newOrder;
+        let order = [{}];
+        order.push(newOrder);
         localStorage.setItem('order', JSON.stringify(order));
     } else {
         order = JSON.parse(order);
