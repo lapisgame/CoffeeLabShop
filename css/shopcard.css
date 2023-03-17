@@ -39,7 +39,7 @@
 
 .card_short_text {
     position: absolute;
-    left: 350px;
+    left: 400px;
     top: 160px;
 }
 
@@ -74,11 +74,13 @@
 .btnplus {
     background: transparent;
     border: none !important;
+    padding: 8px;
 }
 
 .btnminus {
     background: transparent;
     border: none !important;
+    padding: 8px;
 }
 
 .info_time {
@@ -171,4 +173,9 @@
     line-height: 14px;
     text-align: center;
     color: #39260A;
+}
+
+.img_close_button{
+    background: transparent;
+    border: none !important;
 }

@@ -7,14 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Корзина</title>
 
-        
+
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/modal.css">
         <link rel="stylesheet" href="css/modalOPT.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/shopcard.css">
-        
+
         <link rel="icon" href="img/favicon.ico">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,37 +85,13 @@
                 </div>
 
                 <div class="cardspace">
-                    <div class="card">
-                        <div class="img_close">
-                            <button id="close_button" class="img_close_button">
-                                <img src="img/close.png" alt="close">
-                            </button>
-                        </div>
-                        <div class="coffee_box_img">
-                            <img src="img/coffe_box.png" alt="coffe_box">
-                        </div>
-                        <div class="card_short_text">
-                            <h3 class="short_head">Кофе1</h3>
-                            <p class="short_text">300г</p>
-                        </div>
-                        <div class="btn_wrapper">
-                            <div class="counter">
-                                <button class="btnminus" id="buttonCountMinus"
-                                    onclick="minus(1)"><img
-                                        src="img/Bottom-page/minus.png" alt="-"></button>
-                                <div class="counternum" id="count1">1</div>
-                                <button class="btnplus" id="buttonCountPlus"
-                                    onclick="plus(1)"><img
-                                        src="img/Bottom-page/plus.png" alt="+ "></button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="info_time">
                     <div class="blog">
                         <h3 class="time_head1">ОБЖАРКА ПЛАНИРУЕТСЯ</h3>
-                        <p class="time_text1">10 февраля 15:00 МСК</p>
+                        <p class="time_text1">В ТЕЧЕНИИ ДВУХ ДНЕЙ С МОМЕНТА
+                            ЗАКАЗА</p>
                     </div>
                     <div class="blog">
                         <h3 class="time_head2">ОТПРАВКА</h3>
@@ -123,8 +99,9 @@
                     </div>
                 </div>
                 <div class="text_box">
-                    <input class="text_coment" placeholder="Оставьте
-                        комментарий" type="text">
+                    <input class="text_coment"
+                        placeholder="Оставьть комментарий"
+                        type="text">
                 </div>
                 <div class="but_wrap">
                     <button class="but_box">Купить</button>
@@ -394,6 +371,7 @@
     <script defer src="js/modal.js"></script>
     <script src="js/modalOPT.js"></script>
     <script src="js/shopcard.js"></script>
+    <script src="js/shopcard_load.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 </html>
