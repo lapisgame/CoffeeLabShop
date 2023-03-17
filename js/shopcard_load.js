@@ -141,4 +141,5 @@ function render(){
     }
 }
 
+setdate();
 render();
